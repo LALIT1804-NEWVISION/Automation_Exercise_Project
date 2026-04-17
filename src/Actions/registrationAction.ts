@@ -1,5 +1,6 @@
-import { RegistrationPage } from '../../src/Pages/registrationPage';
 import { expect } from '@playwright/test';
+import { RegistrationPage } from '../../src/Pages/registrationPage';
+
 
 export class RegistrationAction {
 
@@ -9,11 +10,11 @@ export class RegistrationAction {
         this.registrationPage = registrationPage;
     }
 
-    async registerUser(user: any) {
-
+    async registerUser(user: any) {        
         await this.registrationPage.navigateToSignup();
         await this.registrationPage.enterSignupDetails(user.name, user.email);
-        await this.registrationPage.fillRegistrationForm(user);
+        await this.registrationPage.fillAccountInformation(user);
+        await this.registrationPage.fillAddressDetails(user);
         await this.registrationPage.submitRegistration();
         await expect(this.registrationPage.accountCreatedMsg).toBeVisible();
     }

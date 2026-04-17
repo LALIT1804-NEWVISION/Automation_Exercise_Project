@@ -1,22 +1,22 @@
 import { test as base } from '@playwright/test';
-import { LoginPage } from '../../src/Pages/loginPage';
-import { LoginAction } from '../../src/Actions/loginAction';
+import { RegistrationPage } from '../Pages/registrationPage';
+import { RegistrationAction } from '../Actions/registrationAction';
 
 type MyFixtures = {
-    loginPage: LoginPage;
-    loginAction: LoginAction;
+    registrationPage: RegistrationPage;
+    registrationAction: RegistrationAction;
 };
 
 export const test = base.extend<MyFixtures>({
 
-    loginPage: async ({ page }, use) => {
-        const loginPage = new LoginPage(page);
-        await use(loginPage);
+    registrationPage: async ({ page }, use) => {
+        const regPage = new RegistrationPage(page);
+        await use(regPage);
     },
 
-    loginAction: async ({ page, loginPage }, use) => {
-        const loginAction = new LoginAction(loginPage);
-        await use(loginAction);
+    registrationAction: async ({ registrationPage }, use) => {
+        const regAction = new RegistrationAction(registrationPage);
+        await use(regAction);
     }
 
 });
