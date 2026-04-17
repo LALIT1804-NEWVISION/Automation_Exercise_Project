@@ -1,6 +1,5 @@
 import { expect } from '@playwright/test';
-import { RegistrationPage } from '../../src/Pages/registrationPage';
-
+import { RegistrationPage } from '../Pages/registrationPage';
 
 export class RegistrationAction {
 
@@ -16,6 +15,8 @@ export class RegistrationAction {
         await this.registrationPage.fillAccountInformation(user);
         await this.registrationPage.fillAddressDetails(user);
         await this.registrationPage.submitRegistration();
-        await expect(this.registrationPage.accountCreatedMsg).toBeVisible();
+
+        await expect(this.registrationPage.accountCreatedMsg)
+            .toHaveText(/account created/i);
     }
 }

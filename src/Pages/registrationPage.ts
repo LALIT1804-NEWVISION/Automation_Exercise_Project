@@ -27,7 +27,7 @@ export class RegistrationPage {
     constructor(page: Page) {
         this.page = page;
 
-        this.signupLoginLink = page.locator('//*[@class="fa fa-lock"]/parent::a');
+        this.signupLoginLink = page.locator('a[href="/login"]');
         this.nameInput = page.locator('input[data-qa="signup-name"]');
         this.emailInput = page.locator('input[data-qa="signup-email"]');
         this.signupButton = page.locator('button[data-qa="signup-button"]');
@@ -61,8 +61,6 @@ export class RegistrationPage {
 
     async fillAccountInformation(user: any) {
         await this.titleMr.check();
-        await this.nameInput.fill(user.name);
-        await this.emailInput.fill(user.email);
         await this.passwordInput.fill(user.password);
         await this.dayDropdown.selectOption(user.day);
         await this.monthDropdown.selectOption(user.month);
