@@ -14,8 +14,8 @@ export const test = base.extend<MyFixtures>({
         await use(regPage);
     },
 
-    registrationAction: async ({ registrationPage }, use) => {
-        const regAction = new RegistrationAction(registrationPage);
+    registrationAction: async ({ page }, use) => {
+        const regAction = new RegistrationAction(page);
         await use(regAction);
     }
 

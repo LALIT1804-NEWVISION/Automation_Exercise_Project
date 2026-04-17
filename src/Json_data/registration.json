@@ -1,15 +1,19 @@
 {
-  "name": "Lalit",
-  "email": "existing@gmail.com",
-  "password": "Test@123",
-  "day": "10",
-  "month": "4",
-  "year": "1997",
-  "firstName": "Lalit",
-  "lastName": "Gupta",
-  "address": "207C Rajat Bihar Colony",
-  "state": "Madhya Pradesh",
-  "city": "Bhopal",
-  "zipcode": "462026",
-  "mobile": "8770539876"
+  "baseUrl": "https://automationexercise.com/",
+  "accountInfo": {
+    "password": "Test@123",
+    "day": "10",
+    "month": "4",
+    "year": "1997"
+  },
+  "addressInfo": {
+    "firstName": "Lalit",
+    "lastName": "Gupta",
+    "address": "Rajat Bihar Colony",
+    "country": "India",
+    "state": "Madhya Pradesh",
+    "city": "Bhopal",
+    "zipcode": "462026",
+    "mobileNumber": "8770539876"
+  }
 }

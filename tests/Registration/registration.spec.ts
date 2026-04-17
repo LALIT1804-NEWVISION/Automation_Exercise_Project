@@ -4,103 +4,114 @@ import RegistrationData from '../../src/Json_data/registration.json';
 test.describe('Registration Module - All Test Cases', () => {
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('https://automationexercise.com/');
+        await page.goto(RegistrationData.baseUrl);
         await expect(page).toHaveURL(/automationexercise/);
     });
 
     test('TC01 - Valid Registration', async ({ registrationAction }) => {
-        const user = { ...RegistrationData, email: `test${Date.now()}@gmail.com` };
-        await registrationAction.registerUser(user);
+        const user = await registrationAction.registerNewUser();
+        expect(user.email).toContain('@');
     });
 
-    test('TC02 - Existing Email', async ({ page, registrationPage }) => {
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(
-            RegistrationData.name,
-            RegistrationData.email
+    test('TC02 - Existing Email', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
+
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(
+            data.generatedUser?.name || "Test",
+            data.generatedUser!.email
         );
 
-        const error = page.locator('text=Email Address already exist');
+        const error = registrationAction.page.locator('text=Email Address already exist');
         await expect(error).toBeVisible();
     });
 
-    test('TC03 - Empty Name', async ({ page, registrationPage }) => {
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails('', `test${Date.now()}@gmail.com`);
+    test('TC03 - Empty Name', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
 
-        await expect(registrationPage.nameInput).toHaveValue('');
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup('', `test${Date.now()}@gmail.com`);
+
+        await expect(registrationAction.registrationPage.nameInput).toHaveValue('');
     });
 
-    test('TC04 - Empty Email', async ({ registrationPage }) => {
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(RegistrationData.name, '');
+    test('TC04 - Empty Email', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
 
-        await expect(registrationPage.emailInput).toHaveValue('');
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(data.addressInfo.firstName, '');
+
+        await expect(registrationAction.registrationPage.emailInput).toHaveValue('');
     });
 
-    test('TC05 - Invalid Email', async ({ registrationPage }) => {
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(RegistrationData.name, 'invalid-email');
+    test('TC05 - Invalid Email', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
 
-        await expect(registrationPage.emailInput).toHaveValue('invalid-email');
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(data.addressInfo.firstName, 'invalid-email');
+
+        await expect(registrationAction.registrationPage.emailInput).toHaveValue('invalid-email');
     });
 
-    test('TC06 - Empty Password', async ({ registrationPage }) => {
-        const user = { ...RegistrationData, email: `test${Date.now()}@mail.com`, password: '' };
+    test('TC06 - Empty Password', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
 
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(user.name, user.email);
-        await registrationPage.fillAccountInformation(user);
-
-        await expect(registrationPage.passwordInput).toHaveValue('');
-    });
-
-    test('TC07 - Missing Address Details', async ({ registrationPage }) => {
         const user = {
-            ...RegistrationData,
-            email: `test${Date.now()}@mail.com`,
-            firstName: '',
-            lastName: ''
+            name: "Test",
+            email: `test${Date.now()}@mail.com`
         };
 
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(user.name, user.email);
-        await registrationPage.fillAccountInformation(user);
-        await registrationPage.fillAddressDetails(user);
-        await registrationPage.submitRegistration();
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(user.name, user.email);
 
-        await expect(registrationPage.accountCreatedMsg).not.toBeVisible();
+        await registrationAction.registrationPage.passwordInput.fill('');
+        await expect(registrationAction.registrationPage.passwordInput).toHaveValue('');
     });
 
-    test('TC08 - Newsletter & Offers Checkbox', async ({ registrationPage }) => {
-        const user = { ...RegistrationData, email: `test${Date.now()}@gmail.com` };
+    test('TC07 - Missing Address Details', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
+        const user = registrationAction.generateUser(data);
 
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(user.name, user.email);
-        await registrationPage.fillAccountInformation(user);
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(user.name, user.email);
 
-        await expect(registrationPage.newsletterCheckbox).toBeChecked();
-        await expect(registrationPage.offersCheckbox).toBeChecked();
+        await registrationAction.registrationPage.firstName.fill('');
+        await registrationAction.registrationPage.lastName.fill('');
+
+        await registrationAction.registrationPage.createAccountBtn.click();
+
+        await expect(registrationAction.registrationPage.accountCreatedMsg).not.toBeVisible();
     });
 
-    test('TC09 - Invalid Mobile Number', async ({ registrationPage }) => {
-        const user = {
-            ...RegistrationData,
-            email: `test${Date.now()}@gmail.com`,
-            mobile: 'abc123'
-        };
+    test('TC08 - Newsletter & Offers Checkbox', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
+        const user = registrationAction.generateUser(data);
 
-        await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(user.name, user.email);
-        await registrationPage.fillAccountInformation(user);
-        await registrationPage.fillAddressDetails(user);
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(user.name, user.email);
 
-        await expect(registrationPage.mobileNumber).toHaveValue('abc123');
+        await registrationAction.registrationPage.newsletterCheckbox.check();
+        await registrationAction.registrationPage.offersCheckbox.check();
+
+        await expect(registrationAction.registrationPage.newsletterCheckbox).toBeChecked();
+        await expect(registrationAction.registrationPage.offersCheckbox).toBeChecked();
+    });
+
+    test('TC09 - Invalid Mobile Number', async ({ registrationAction }) => {
+        const data = await registrationAction.readData();
+        const user = registrationAction.generateUser(data);
+
+        await registrationAction.openSignup(data.baseUrl);
+        await registrationAction.fillSignup(user.name, user.email);
+
+        await registrationAction.registrationPage.mobileNumber.fill('abc123');
+
+        await expect(registrationAction.registrationPage.mobileNumber).toHaveValue('abc123');
     });
 
     test('TC10 - Full Registration Flow', async ({ registrationAction }) => {
-        const user = { ...RegistrationData, email: `test${Date.now()}@mail.com` };
-        await registrationAction.registerUser(user);
+        const user = await registrationAction.registerNewUser();
+        console.log("Created User:", user);
     });
 
     test.afterEach(async () => {
