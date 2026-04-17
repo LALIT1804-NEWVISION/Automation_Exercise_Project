@@ -16,7 +16,7 @@ test.describe('Registration Module - All Test Cases', () => {
     test('TC02 - Existing Email(Already Registered Email)', async ({ page, registrationPage }) => {
 
         await registrationPage.navigateToSignup();
-        await registrationPage.enterSignupDetails(RegistrationData.name, RegistrationData.email);
+        await registrationPage.enterSignupDetails(RegistrationData.name, `test${Date.now()}@gmail.com`);
         const error = page.locator('//p[contains(text(),"Email Address already exist")]');
         await expect(error).toBeVisible();
     });
