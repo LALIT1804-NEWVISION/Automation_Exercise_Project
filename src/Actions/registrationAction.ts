@@ -37,7 +37,7 @@ export class RegistrationAction {
  
   constructor(page: Page) {
     this.registrationPage = new RegistrationPage(page);
-    this.registrationDataPath = path.resolve(process.cwd(), "src/testdata/registration.json");
+    this.registrationDataPath = path.resolve(process.cwd(), "src/Json_data/registration.json");
   }
  
   async readRegistrationData(): Promise<RegistrationData> {

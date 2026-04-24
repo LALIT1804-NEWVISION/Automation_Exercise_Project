@@ -1,24 +1,34 @@
-import { test as base } from '@playwright/test';
-import { RegistrationPage } from '../Pages/registrationPage';
-import { RegistrationAction } from '../Actions/registrationAction';
+import { test as base, expect } from "@playwright/test";
+import registrationData from "../../src/Json_data/registration.json";
+import { RegistrationAction } from "../../src/Actions/registrationAction";
+import { ProductPage } from "../../src/Pages/productPage";
 
-type MyFixtures = {
-    registrationPage: RegistrationPage;
-    registrationAction: RegistrationAction;
+type AppActions = {
+    registration: RegistrationAction;
 };
 
-export const test = base.extend<MyFixtures>({
+type Fixtures = {
+    gotoBaseUrl: void;
+    appAction: AppActions;
+};
 
-    registrationPage: async ({ page }, use) => {
-        const regPage = new RegistrationPage(page);
-        await use(regPage);
+export const test = base.extend<Fixtures>({
+    gotoBaseUrl: [
+        async ({ page }, use) => {
+            await page.goto(registrationData.baseUrl);
+            await use();
+        },
+        { auto: true }
+    ],
+
+    appAction: async ({ page }, use) => {
+        const appAction: AppActions = {
+            registration: new RegistrationAction(page),
+        };
+
+        await use(appAction);
     },
-
-    registrationAction: async ({ page }, use) => {
-        const regAction = new RegistrationAction(page);
-        await use(regAction);
-    }
 
 });
 
-export { expect } from '@playwright/test';
+export { expect };

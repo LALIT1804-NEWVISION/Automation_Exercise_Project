@@ -1,0 +1,5 @@
+Created User: {
+  name: 'Junior',
+  email: 'junior_russel@examplemail.com',
+  password: 'Test@12345'
+}
