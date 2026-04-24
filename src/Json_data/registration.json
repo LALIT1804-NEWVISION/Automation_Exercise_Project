@@ -1,19 +1,24 @@
 {
   "baseUrl": "https://automationexercise.com/",
   "accountInfo": {
-    "password": "Test@123",
+    "password": "Test@12345",
     "day": "10",
-    "month": "4",
-    "year": "1997"
+    "month": "5",
+    "year": "1998"
   },
   "addressInfo": {
-    "firstName": "Lalit",
-    "lastName": "Gupta",
-    "address": "Rajat Bihar Colony",
+    "firstName": "Auto",
+    "lastName": "User",
+    "address": "221B Baker Street",
     "country": "India",
-    "state": "Madhya Pradesh",
-    "city": "Bhopal",
-    "zipcode": "462026",
-    "mobileNumber": "8770539876"
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "zipcode": "560001",
+    "mobileNumber": "9876543210"
+  },
+  "generatedUser": {
+    "name": "Rylan",
+    "email": "rylan_gutkowski75@examplemail.com",
+    "password": "Test@12345"
   }
 }
