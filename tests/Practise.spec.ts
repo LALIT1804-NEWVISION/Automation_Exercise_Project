@@ -74,15 +74,17 @@ test.describe('Practise Tests', () => {
         await page.waitForTimeout(3000);
 
         //Select all checkboxes and assert each is checked
-        const days : string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const days : string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const checkboxes: Locator[] = days.map(index => page.getByLabel(index));
-        expect(checkboxes.length).toBe(6);
+        expect(checkboxes.length).toBe(7);
+        for (const checkbox of checkboxes) {
+            await expect(checkbox).toBeVisible();
+            await expect(checkbox).toBeEnabled();3
+            await checkbox.check();
+            await expect(checkbox).toBeChecked();
+        }
 
-
-
-
-
-        const allCheckboxes: Locator = page.locator('input[type="checkbox"]');
+        const allCheckboxes: Locator = page.locator('//div[@class="form-check form-check-inline"]//input[@type="checkbox"]');
         const count = await allCheckboxes.count();
         for (let i = 0; i < count; i++) {
             const checkbox = allCheckboxes.nth(i);
@@ -90,8 +92,9 @@ test.describe('Practise Tests', () => {
             await expect(checkbox).toBeEnabled();
             await checkbox.check();
             await expect(checkbox).toBeChecked();
+          
         }
-        await page.waitForTimeout(3000);
+        
 
 
     });
