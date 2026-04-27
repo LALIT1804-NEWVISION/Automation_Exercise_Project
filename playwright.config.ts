@@ -23,8 +23,9 @@ export default defineConfig({
   workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
+    ['html', { open: 'never' }],
     ['list'],
-    ['allure-playwright']  
+    ['allure-playwright'],  
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

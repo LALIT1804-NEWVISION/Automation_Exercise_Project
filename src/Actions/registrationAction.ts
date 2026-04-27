@@ -82,7 +82,6 @@ export class RegistrationAction {
     await this.registrationPage.days.selectOption(data.accountInfo.day);
     await this.registrationPage.months.selectOption(data.accountInfo.month);
     await this.registrationPage.years.selectOption(data.accountInfo.year);
- 
     await this.registrationPage.firstName.fill(data.addressInfo.firstName);
     await this.registrationPage.lastName.fill(data.addressInfo.lastName);
     await this.registrationPage.address.fill(data.addressInfo.address);
@@ -91,7 +90,6 @@ export class RegistrationAction {
     await this.registrationPage.city.fill(data.addressInfo.city);
     await this.registrationPage.zipcode.fill(data.addressInfo.zipcode);
     await this.registrationPage.mobileNumber.fill(data.addressInfo.mobileNumber);
- 
     await this.registrationPage.createAccountButton.click();
     await expect(this.registrationPage.accountCreatedMessage).toBeVisible();
     await this.registrationPage.continueButton.click();
