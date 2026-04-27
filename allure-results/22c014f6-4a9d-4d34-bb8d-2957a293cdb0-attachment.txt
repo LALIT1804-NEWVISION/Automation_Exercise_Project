@@ -1,0 +1,14 @@
+Original list: [
+  'Cat',      'Cheetah',
+  'Deer',     'Dog',
+  'Elephant', 'Fox',
+  'Giraffe',  'Lion',
+  'Rabbit',   'Zebra'
+]
+Sorted list:  [
+  'Cat',      'Cheetah',
+  'Deer',     'Dog',
+  'Elephant', 'Fox',
+  'Giraffe',  'Lion',
+  'Rabbit',   'Zebra'
+]
