@@ -1,0 +1,315 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Practise.spec.ts >> Bootsrtap hidden dropdown
+- Location: tests\Practise.spec.ts:327:6
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - complementary [ref=e4]:
+      - navigation "Sidepanel" [ref=e5]:
+        - generic [ref=e6]:
+          - link "client brand banner" [ref=e7] [cursor=pointer]:
+            - /url: https://www.orangehrm.com/
+            - img "client brand banner" [ref=e9]
+          - text: 
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - textbox "Search" [ref=e15]
+              - button "" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17]: 
+            - separator [ref=e18]
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "Admin" [ref=e21] [cursor=pointer]:
+                - /url: /web/index.php/admin/viewAdminModule
+                - generic [ref=e24]: Admin
+            - listitem [ref=e25]:
+              - link "PIM" [ref=e26] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewPimModule
+                - generic [ref=e40]: PIM
+            - listitem [ref=e41]:
+              - link "Leave" [ref=e42] [cursor=pointer]:
+                - /url: /web/index.php/leave/viewLeaveModule
+                - generic [ref=e45]: Leave
+            - listitem [ref=e46]:
+              - link "Time" [ref=e47] [cursor=pointer]:
+                - /url: /web/index.php/time/viewTimeModule
+                - generic [ref=e53]: Time
+            - listitem [ref=e54]:
+              - link "Recruitment" [ref=e55] [cursor=pointer]:
+                - /url: /web/index.php/recruitment/viewRecruitmentModule
+                - generic [ref=e61]: Recruitment
+            - listitem [ref=e62]:
+              - link "My Info" [ref=e63] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewMyDetails
+                - generic [ref=e69]: My Info
+            - listitem [ref=e70]:
+              - link "Performance" [ref=e71] [cursor=pointer]:
+                - /url: /web/index.php/performance/viewPerformanceModule
+                - generic [ref=e79]: Performance
+            - listitem [ref=e80]:
+              - link "Dashboard" [ref=e81] [cursor=pointer]:
+                - /url: /web/index.php/dashboard/index
+                - generic [ref=e84]: Dashboard
+            - listitem [ref=e85]:
+              - link "Directory" [ref=e86] [cursor=pointer]:
+                - /url: /web/index.php/directory/viewDirectory
+                - generic [ref=e89]: Directory
+            - listitem [ref=e90]:
+              - link "Maintenance" [ref=e91] [cursor=pointer]:
+                - /url: /web/index.php/maintenance/viewMaintenanceModule
+                - generic [ref=e95]: Maintenance
+            - listitem [ref=e96]:
+              - link "Claim" [ref=e97] [cursor=pointer]:
+                - /url: /web/index.php/claim/viewClaimModule
+                - img [ref=e100]
+                - generic [ref=e104]: Claim
+            - listitem [ref=e105]:
+              - link "Buzz" [ref=e106] [cursor=pointer]:
+                - /url: /web/index.php/buzz/viewBuzz
+                - generic [ref=e109]: Buzz
+    - banner [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: 
+          - heading "PIM" [level=6] [ref=e114]
+        - link "Upgrade" [ref=e116]:
+          - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+          - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125] [cursor=pointer]:
+              - img "profile picture" [ref=e126]
+              - paragraph [ref=e127]: kanfa userTesting
+              - generic [ref=e128]: 
+      - navigation "Topbar Menu" [ref=e130]:
+        - list [ref=e131]:
+          - listitem [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]:
+              - text: Configuration
+              - generic [ref=e134]: 
+          - listitem [ref=e135] [cursor=pointer]:
+            - link "Employee List" [ref=e136]:
+              - /url: "#"
+          - listitem [ref=e137] [cursor=pointer]:
+            - link "Add Employee" [ref=e138]:
+              - /url: "#"
+          - listitem [ref=e139] [cursor=pointer]:
+            - link "Reports" [ref=e140]:
+              - /url: "#"
+          - button "" [ref=e142] [cursor=pointer]:
+            - generic [ref=e143]: 
+  - generic [ref=e144]:
+    - generic [ref=e146]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - heading "Employee Information" [level=5] [ref=e150]
+          - button "" [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]: 
+        - separator [ref=e155]
+        - generic [ref=e157]:
+          - generic [ref=e159]:
+            - generic [ref=e161]:
+              - generic [ref=e163]: Employee Name
+              - textbox "Type for hints..." [ref=e167]
+            - generic [ref=e169]:
+              - generic [ref=e171]: Employee Id
+              - textbox [ref=e173]
+            - generic [ref=e175]:
+              - generic [ref=e177]: Employment Status
+              - generic [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]: "-- Select --"
+                - generic [ref=e183]: 
+            - generic [ref=e185]:
+              - generic [ref=e187]: Include
+              - generic [ref=e190] [cursor=pointer]:
+                - generic [ref=e191]: Current Employees Only
+                - generic [ref=e193]: 
+            - generic [ref=e195]:
+              - generic [ref=e197]: Supervisor Name
+              - textbox "Type for hints..." [ref=e201]
+            - generic [ref=e203]:
+              - generic [ref=e205]: Job Title
+              - generic [ref=e207]:
+                - generic [ref=e208] [cursor=pointer]:
+                  - generic [active] [ref=e209]: "-- Select --"
+                  - generic [ref=e211]: 
+                - listbox [ref=e212]:
+                  - option "No Records Found" [ref=e213] [cursor=pointer]
+            - generic [ref=e215]:
+              - generic [ref=e217]: Sub Unit
+              - generic [ref=e220] [cursor=pointer]:
+                - generic [ref=e221]: "-- Select --"
+                - generic [ref=e223]: 
+          - separator [ref=e224]
+          - generic [ref=e225]:
+            - button "Reset" [ref=e226] [cursor=pointer]
+            - button "Search" [ref=e227] [cursor=pointer]
+      - generic [ref=e228]:
+        - button " Add" [ref=e230] [cursor=pointer]:
+          - generic [ref=e231]: 
+          - text: Add
+        - table [ref=e233]
+    - generic [ref=e238]:
+      - paragraph [ref=e239]: OrangeHRM OS 5.8
+      - paragraph [ref=e240]:
+        - text: © 2005 - 2026
+        - link "OrangeHRM, Inc" [ref=e241] [cursor=pointer]:
+          - /url: http://www.orangehrm.com
+        - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+  245 |     console.log(await dropDownOptions1.allTextContents());
+  246 |     const optionsText2: string[] = (await dropDownOptions1.allTextContents()).map(text => text.trim());
+  247 |     const originalList2: string[] = optionsText2;
+  248 |     const sortedList2: string[] = optionsText2.sort();
+  249 |     console.log("Original list:", originalList2);
+  250 |     console.log("Sorted list: ", sortedList2);
+  251 |     await page.waitForTimeout(5000);
+  252 | 
+  253 | });
+  254 | 
+  255 | test("Verify dropdown contains duplicates", async ({ page }) => {
+  256 | 
+  257 |     //const dropDownOptions: Locator = page.locator('//select[@id="colors"]/option');     // having duplicates
+  258 |     const dropDownOptions: Locator = page.locator('//select[@id="animals"]/option');   // not having duplicates
+  259 |     const optionsText: string[] = (await dropDownOptions.allTextContents()).map(text => text.trim());
+  260 |     const myset = new Set<string>(); // Set-duplicates not allowed
+  261 |     const duplicates: string[] = []; // array duplicates allowed
+  262 | 
+  263 |     for (const text of optionsText) {
+  264 |         if (myset.has(text)) {
+  265 | 
+  266 |             duplicates.push(text);
+  267 |         }
+  268 |         else {
+  269 |             myset.add(text);
+  270 |         }
+  271 |     }
+  272 |     //console.log("Duplicate options are:===>", duplicates);
+  273 | 
+  274 |     if (duplicates.length > 0) {
+  275 |         console.log("Duplicate options found.", duplicates)
+  276 |     }
+  277 |     else {
+  278 |         console.log("No duplicate options found..")
+  279 |     }
+  280 |     //expect(duplicates.length).toBe(0);
+  281 | });
+  282 | 
+  283 | //await page.waitForTimeout(5000);
+  284 | 
+  285 | //========================================================= Session-8 =========================================================
+  286 | 
+  287 | test('AutoSuggest dropdown', async ({ page }) => {
+  288 | 
+  289 |     await page.goto('https://www.flipkart.com/');
+  290 |     await page.locator('//span[@role="button"]').click();
+  291 |     const searchBar: Locator = page.locator('//form[@class="lilxh_ header-form-search"]//input[@placeholder="Search for Products, Brands and More"]');
+  292 |     await searchBar.fill('smart');
+  293 |     await page.waitForLoadState('domcontentloaded');
+  294 |     await page.locator('//button[@type="submit"]').click();
+  295 |     const searchbar2: Locator = page.locator('//form[@class="rcHWnF header-form-search"]//input[@placeholder="Search for products, brands and more"]');
+  296 |     await searchbar2.click();
+  297 |     await searchbar2.clear();
+  298 |     await searchbar2.type('smart', { delay: 500 });
+  299 | 
+  300 |     // Get all suggest options
+  301 |     const options: Locator = page.locator('//ul[@class="col-12-12 I01Bvi O1jfZ8"]/li');
+  302 |     await page.waitForLoadState('domcontentloaded');
+  303 |     const optionsCount: number = await options.count();
+  304 |     console.log('Number of suggest options:', optionsCount);
+  305 | 
+  306 |     //printing all the suggest options
+  307 | 
+  308 |     console.log('5th option : ', await options.nth(5).innerText());
+  309 | 
+  310 |     // Print all the suggest options
+  311 |     for (let i = 0; i < optionsCount; i++) {
+  312 |         const optionText: string | null = await options.nth(i).textContent();
+  313 |         console.log(`Option ${i + 1}: ${optionText?.trim()}`);
+  314 |     }
+  315 | 
+  316 |     //Select/Click on the smartPhone option
+  317 |     for (let i = 0; i < optionsCount; i++) {
+  318 |         const optionText: string | null = await options.nth(i).textContent();
+  319 |         if (optionText === 'smartphone') {
+  320 |             options.nth(i).click();
+  321 |             break;
+  322 |         }
+  323 |     }
+  324 |     await page.waitForTimeout(5000);
+  325 | });
+  326 | 
+  327 | test.only("Bootsrtap hidden dropdown", async ({ page }) => {
+  328 | 
+  329 |     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  330 | 
+  331 |     //Login steps
+  332 | 
+  333 |     await page.locator('input[name="username"]').fill('Admin');
+  334 |     await page.locator('input[name="password"]').fill('admin123');
+  335 |     await page.locator('//button[normalize-space()="Login"]').click();
+  336 | 
+  337 |     //click on the PIM
+  338 | 
+  339 |     await page.getByText('PIM').click();
+  340 | 
+  341 |     //click on Job TiTLE Dropdown
+  342 | 
+  343 |     const dropdownArrow :Locator = page.locator('//label[normalize-space()="Job Title"]/ancestor::div[contains(@class,"oxd-input-group")]//i');
+  344 |     await dropdownArrow.click(); 
+> 345 |     await page.waitForLoadState('networkidle');
+      |                ^ Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+  346 | 
+  347 |     // capture all the options from dropdown and count
+  348 | 
+  349 |     const options: Locator = page.locator('div[role="listbox"] span');
+  350 |     const count: number = await options.count();
+  351 |     console.log("Number of options in a dropdown:", count);
+  352 | 
+  353 |     // Print all the options
+  354 | 
+  355 |     console.log("All the text contenst:", await options.allTextContents());
+  356 | 
+  357 |     console.log("Pring all the options.....")
+  358 |     for (let i = 0; i < count; i++) {
+  359 |         console.log(await options.nth(i).textContent());
+  360 |     }
+  361 | 
+  362 |     // select/click on option
+  363 |     for (let i = 0; i < count; i++) {
+  364 |         const text: string | null = await options.nth(i).textContent();
+  365 |         if (text === 'Automation Tester'){
+  366 |             await options.nth(i).click();
+  367 |         }
+  368 |     }
+  369 | 
+  370 | });
+  371 | 
+  372 | 
+  373 | 
+```

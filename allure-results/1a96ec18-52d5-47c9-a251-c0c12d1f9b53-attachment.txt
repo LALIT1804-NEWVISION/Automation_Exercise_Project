@@ -1,0 +1,9 @@
+Number of suggest options: 8
+Option 1: smart watchesin Smart Watches
+Option 2: smart tv
+Option 3: smart watch boat
+Option 4: smart ring boat
+Option 5: smart watches men latest
+Option 6: smart watches for female
+Option 7: smart band
+Option 8: smart board teaching

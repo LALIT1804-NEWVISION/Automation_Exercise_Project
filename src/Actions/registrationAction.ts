@@ -2,7 +2,7 @@ import { expect, Page } from "@playwright/test";
 import { faker } from "@faker-js/faker";
 import * as fs from "fs/promises";
 import * as path from "path";
-import { RegistrationPage } from "../../src/Pages/registrationPage";
+import { RegistrationPage } from "../Pages/1_registrationPage";
  
 export type GeneratedRegistrationUser = {
   name: string;

@@ -1,0 +1,1515 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Practise.spec.ts >> Practise Tests >> AutoSuggest dropdown
+- Location: tests\Practise.spec.ts:287:10
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('//ul[@class="col-12-12 I01Bvi O1jfZ8"]/li')
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for locator('//ul[@class="col-12-12 I01Bvi O1jfZ8"]/li')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - link "Flipkart" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img "Flipkart" [ref=e11]
+      - link "Explore Plus" [ref=e12] [cursor=pointer]:
+        - /url: /plus
+        - text: Explore Plus
+        - img [ref=e13]
+    - generic [ref=e16]:
+      - textbox "Search for products, brands and more" [ref=e18]: smart
+      - button [ref=e19] [cursor=pointer]:
+        - img [ref=e20]
+    - link "Login" [ref=e28] [cursor=pointer]:
+      - /url: /account/login?ret=/search%3Fq%3Dsmart%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Doff%26as%3Doff
+    - link "Become a Seller" [ref=e30] [cursor=pointer]:
+      - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+      - generic [ref=e31]: Become a Seller
+    - generic [ref=e33] [cursor=pointer]:
+      - generic [ref=e36]: More
+      - img [ref=e37]
+    - link "Cart" [ref=e42] [cursor=pointer]:
+      - /url: /viewcart?exploreMode=true&preference=FLIPKART
+      - img [ref=e43]
+      - generic [ref=e45]: Cart
+  - generic [ref=e50]:
+    - generic [ref=e51] [cursor=pointer]:
+      - text: Electronics
+      - img [ref=e52]
+    - generic [ref=e54] [cursor=pointer]:
+      - text: TVs & Appliances
+      - img [ref=e55]
+    - generic [ref=e57] [cursor=pointer]:
+      - text: Men
+      - img [ref=e58]
+    - generic [ref=e60] [cursor=pointer]:
+      - text: Women
+      - img [ref=e61]
+    - generic [ref=e63] [cursor=pointer]:
+      - text: Baby & Kids
+      - img [ref=e64]
+    - generic [ref=e66] [cursor=pointer]:
+      - text: Home & Furniture
+      - img [ref=e67]
+    - generic [ref=e69] [cursor=pointer]:
+      - text: Sports, Books & More
+      - img [ref=e70]
+    - link "Flights" [ref=e72] [cursor=pointer]:
+      - /url: /travel/flights?otracker=nmenu_Flights
+    - link "Offer Zone" [ref=e73] [cursor=pointer]:
+      - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+  - generic [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e77]:
+        - generic [ref=e79]:
+          - generic [ref=e82]: Filters
+          - generic [ref=e84]:
+            - generic [ref=e85]: CATEGORIES
+            - generic [ref=e87]:
+              - img [ref=e89] [cursor=pointer]
+              - link "Home Entertainment" [ref=e91] [cursor=pointer]:
+                - /url: /home-entertainment/pr?sid=ckf&q=smart&otracker=categorytree
+            - generic [ref=e93]:
+              - img [ref=e95] [cursor=pointer]
+              - link "Televisions" [ref=e97] [cursor=pointer]:
+                - /url: /televisions/pr?sid=ckf,czl&q=smart&otracker=categorytree
+          - generic [ref=e98]:
+            - generic [ref=e99] [cursor=pointer]:
+              - generic [ref=e100]: Brand
+              - img [ref=e101]
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]:
+                  - img [ref=e106]
+                  - textbox "Search Brand" [ref=e110]
+                - generic "SONY" [ref=e111] [cursor=pointer]:
+                  - generic [ref=e115]: SONY
+                - generic "Samsung" [ref=e116] [cursor=pointer]:
+                  - generic [ref=e120]: Samsung
+                - generic "LG" [ref=e121] [cursor=pointer]:
+                  - generic [ref=e125]: LG
+                - generic "TCL" [ref=e126] [cursor=pointer]:
+                  - generic [ref=e130]: TCL
+                - generic "XIAOMI" [ref=e131] [cursor=pointer]:
+                  - generic [ref=e135]: XIAOMI
+                - generic "MOTOROLA" [ref=e136] [cursor=pointer]:
+                  - generic [ref=e140]: MOTOROLA
+              - generic [ref=e141] [cursor=pointer]: 59 MORE
+          - generic [ref=e143] [cursor=pointer]:
+            - generic [ref=e144]: Screen Size
+            - img [ref=e145]
+          - generic [ref=e148] [cursor=pointer]:
+            - generic [ref=e149]: Display Technology
+            - img [ref=e150]
+          - generic [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]: Operating System
+            - img [ref=e155]
+          - generic [ref=e158] [cursor=pointer]:
+            - generic [ref=e159]: Refresh Rate
+            - img [ref=e160]
+          - generic [ref=e163] [cursor=pointer]:
+            - generic [ref=e164]: Resolution
+            - img [ref=e165]
+          - generic [ref=e167]:
+            - generic [ref=e169]: Price
+            - generic [ref=e186]:
+              - generic [ref=e187]: .
+              - generic [ref=e188]: .
+              - generic [ref=e189]: .
+              - generic [ref=e190]: .
+              - generic [ref=e191]: .
+              - generic [ref=e192]: .
+              - generic: .
+            - generic [ref=e193]:
+              - combobox [ref=e195]:
+                - option "Min" [selected]
+                - option "₹15000"
+                - option "₹30000"
+                - option "₹40000"
+                - option "₹50000"
+                - option "₹60000"
+              - generic [ref=e196]: to
+              - combobox [ref=e198]:
+                - option "₹15000"
+                - option "₹30000"
+                - option "₹40000"
+                - option "₹50000"
+                - option "₹60000"
+                - option "₹60000+" [selected]
+          - generic [ref=e200] [cursor=pointer]:
+            - generic [ref=e201]: Smart Features
+            - img [ref=e202]
+          - generic [ref=e205] [cursor=pointer]:
+            - generic [ref=e206]: Ideal for Viewing Distance
+            - img [ref=e207]
+          - generic [ref=e210] [cursor=pointer]:
+            - generic [ref=e211]: Number of USB Ports
+            - img [ref=e212]
+          - generic [ref=e215] [cursor=pointer]:
+            - generic [ref=e216]: Number of HDMI Ports
+            - img [ref=e217]
+          - generic [ref=e219]:
+            - generic [ref=e220] [cursor=pointer]:
+              - generic [ref=e221]: Customer Ratings
+              - img [ref=e222]
+            - generic [ref=e225]:
+              - generic "4★ & above" [ref=e226] [cursor=pointer]:
+                - generic [ref=e230]: 4★ & above
+              - generic "3★ & above" [ref=e231] [cursor=pointer]:
+                - generic [ref=e235]: 3★ & above
+              - generic "2★ & above" [ref=e236] [cursor=pointer]:
+                - generic [ref=e240]: 2★ & above
+              - generic "1★ & above" [ref=e241] [cursor=pointer]:
+                - generic [ref=e245]: 1★ & above
+          - generic [ref=e246]:
+            - img [ref=e251] [cursor=pointer]
+            - generic [ref=e253] [cursor=pointer]: "?"
+          - generic [ref=e255] [cursor=pointer]:
+            - generic [ref=e256]: Discount
+            - img [ref=e257]
+          - generic [ref=e259]:
+            - generic [ref=e260] [cursor=pointer]:
+              - generic [ref=e261]: Offers
+              - img [ref=e262]
+            - generic [ref=e265]:
+              - generic "Buy More, Save More" [ref=e266] [cursor=pointer]:
+                - generic [ref=e270]: Buy More, Save More
+              - generic "Special Price" [ref=e271] [cursor=pointer]:
+                - generic [ref=e275]: Special Price
+          - generic [ref=e277] [cursor=pointer]:
+            - generic [ref=e278]: Availability
+            - img [ref=e279]
+          - generic [ref=e282] [cursor=pointer]:
+            - generic [ref=e283]: GST Invoice Available
+            - img [ref=e284]
+        - link "Need help? Help me decide Buying Guide" [ref=e287] [cursor=pointer]:
+          - /url: /buying-guide/tvs?sid=ckf,czl&otracker=bg_from_browse_lhs
+          - generic [ref=e288]: Need help?
+          - generic [ref=e289]:
+            - text: Help me decide
+            - img [ref=e290]
+          - img "Buying Guide" [ref=e292]
+      - generic [ref=e293]:
+        - generic [ref=e296]:
+          - generic [ref=e297]:
+            - generic [ref=e298]:
+              - link "Home" [ref=e299] [cursor=pointer]:
+                - /url: /
+              - img [ref=e300]
+            - generic [ref=e302]:
+              - link "Home Entertainment" [ref=e303] [cursor=pointer]:
+                - /url: /home-entertainment/pr?sid=ckf&marketplace=FLIPKART
+              - img [ref=e304]
+            - link "Televisions" [ref=e307] [cursor=pointer]:
+              - /url: /televisions/pr?sid=ckf,czl&marketplace=FLIPKART
+          - generic [ref=e308]: Showing 1 – 24 of 952 results for "smart"
+          - generic [ref=e309]:
+            - generic [ref=e310]: Sort By
+            - generic [ref=e311]: Relevance
+            - generic [ref=e312] [cursor=pointer]: Popularity
+            - generic [ref=e313] [cursor=pointer]: Price -- Low to High
+            - generic [ref=e314] [cursor=pointer]: Price -- High to Low
+            - generic [ref=e315] [cursor=pointer]: Newest First
+            - generic [ref=e316] [cursor=pointer]: Discount
+        - 'link "acerpure Nitro 164 cm (65 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do... Add to Compare acerpure Nitro 164 cm (65 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do... 3.9 1,807 Ratings & 239 Reviews • Ultra HD (4K) | QLED • Model ID: AP65UG75PNTO5 • Launch Year: 2025 • Total Sound Output: 50 W • 1 Year Comprehensive Warranty On Product ₹37,799 ₹1,10,990 65% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e321] [cursor=pointer]':
+          - /url: /acerpure-nitro-164-cm-65-inch-qled-ultra-hd-4k-smart-google-tv-120-hz-gtv-5-0-android-14-dolby-vision-dolby-atmos-50w-sound-tuner-wi-fi-direct-allm-vrr-memc-karaoke-ai-gaming-wall-mount/p/itm9c9372bae0ed3?pid=TVSHEQG27E6KGZFQ&lid=LSTTVSHEQG27E6KGZFQ4JKPXX&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_1&otracker=search&otracker1=search&fm=organic&iid=en_dMrUkIGxhKP01Yiz7j3dKW0aPSmdjrXoaY6AMf4oygx3t99TltNTkt7GoBzDcOzppZCmoJDDj9Qk4RTZGfBnFU4IsYyWu-Pj9cxFjFAoaLk%3D&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e322]:
+            - img "acerpure Nitro 164 cm (65 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do..." [ref=e326]
+            - generic [ref=e332]: Add to Compare
+            - img [ref=e335]
+          - generic [ref=e337]:
+            - generic [ref=e338]:
+              - img [ref=e340]
+              - generic [ref=e343]: acerpure Nitro 164 cm (65 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do...
+              - generic [ref=e344]:
+                - generic [ref=e346]:
+                  - text: "3.9"
+                  - img [ref=e347]
+                - generic [ref=e349]: 1,807 Ratings & 239 Reviews
+              - list [ref=e351]:
+                - listitem [ref=e352]: • Ultra HD (4K) | QLED
+                - listitem [ref=e353]: "• Model ID: AP65UG75PNTO5"
+                - listitem [ref=e354]: "• Launch Year: 2025"
+                - listitem [ref=e355]: "• Total Sound Output: 50 W"
+                - listitem [ref=e356]: • 1 Year Comprehensive Warranty On Product
+            - generic [ref=e357]:
+              - generic [ref=e359]:
+                - generic [ref=e360]: ₹37,799
+                - generic [ref=e361]: ₹1,10,990
+                - generic [ref=e362]: 65% off
+              - generic [ref=e365]: Hot Deal
+              - generic [ref=e367]:
+                - generic [ref=e368]: Upto
+                - generic [ref=e369]: ₹3,720
+                - generic [ref=e370]: Off on Exchange
+        - 'link "acerpure Nitro 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do... Add to Compare acerpure Nitro 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do... 3.9 1,807 Ratings & 239 Reviews • Ultra HD (4K) | QLED • Model ID: AP55UG75PNTO5 • Launch Year: 2025 • Total Sound Output: 50 W • 1 Year Comprehensive Warranty On Product ₹28,999 ₹80,990 64% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e375] [cursor=pointer]':
+          - /url: /acerpure-nitro-139-cm-55-inch-qled-ultra-hd-4k-smart-google-tv-120-hz-gtv-5-0-android-14-dolby-vision-dolby-atmos-50w-sound-tuner-wi-fi-direct-allm-vrr-memc-karaoke-ai-gaming-wall-mount/p/itma2546b6494183?pid=TVSHEQG2DYAVGDYW&lid=LSTTVSHEQG2DYAVGDYWLJDDRZ&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_2&otracker=search&otracker1=search&fm=organic&iid=en_dMrUkIGxhKP01Yiz7j3dKW0aPSmdjrXoaY6AMf4oygyDAyrCBGW6-Ea4Jz2mZiT2E0e-MWHUFhxpugetTBKjmIQEIsITtCzc4bHaOMTqL08%3D&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e376]:
+            - img "acerpure Nitro 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do..." [ref=e380]
+            - generic [ref=e386]: Add to Compare
+            - img [ref=e389]
+          - generic [ref=e391]:
+            - generic [ref=e392]:
+              - img [ref=e394]
+              - generic [ref=e397]: acerpure Nitro 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |Do...
+              - generic [ref=e398]:
+                - generic [ref=e400]:
+                  - text: "3.9"
+                  - img [ref=e401]
+                - generic [ref=e403]: 1,807 Ratings & 239 Reviews
+              - list [ref=e405]:
+                - listitem [ref=e406]: • Ultra HD (4K) | QLED
+                - listitem [ref=e407]: "• Model ID: AP55UG75PNTO5"
+                - listitem [ref=e408]: "• Launch Year: 2025"
+                - listitem [ref=e409]: "• Total Sound Output: 50 W"
+                - listitem [ref=e410]: • 1 Year Comprehensive Warranty On Product
+            - generic [ref=e411]:
+              - generic [ref=e413]:
+                - generic [ref=e414]: ₹28,999
+                - generic [ref=e415]: ₹80,990
+                - generic [ref=e416]: 64% off
+              - img [ref=e418]
+              - generic [ref=e421]: Hot Deal
+              - generic [ref=e423]:
+                - generic [ref=e424]: Upto
+                - generic [ref=e425]: ₹3,720
+                - generic [ref=e426]: Off on Exchange
+        - 'link "MarQ by Flipkart 60 cm (24 inch) HD Ready LED TV Add to Compare MarQ by Flipkart 60 cm (24 inch) HD Ready LED TV 4.2 12,382 Ratings & 918 Reviews • HD Ready | LED • Model ID: 24HDNDQEETB • Launch Year: 2024 • Total Sound Output: 20 W • 12 Months Warranty ₹5,299 ₹15,000 64% off Upto ₹3,720 Off on Exchange Bank Offer" [ref=e431] [cursor=pointer]':
+          - /url: /marq-flipkart-60-cm-24-inch-hd-ready-led-tv/p/itm1d8dfccd459d1?pid=TVSH2KYNDMV3XUQ2&lid=LSTTVSH2KYNDMV3XUQ2NDELTL&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSH2KYNDMV3XUQ2.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e432]:
+            - img "MarQ by Flipkart 60 cm (24 inch) HD Ready LED TV" [ref=e436]
+            - generic [ref=e442]: Add to Compare
+            - img [ref=e445]
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - generic [ref=e449]: MarQ by Flipkart 60 cm (24 inch) HD Ready LED TV
+              - generic [ref=e450]:
+                - generic [ref=e452]:
+                  - text: "4.2"
+                  - img [ref=e453]
+                - generic [ref=e455]: 12,382 Ratings & 918 Reviews
+              - list [ref=e457]:
+                - listitem [ref=e458]: • HD Ready | LED
+                - listitem [ref=e459]: "• Model ID: 24HDNDQEETB"
+                - listitem [ref=e460]: "• Launch Year: 2024"
+                - listitem [ref=e461]: "• Total Sound Output: 20 W"
+                - listitem [ref=e462]: • 12 Months Warranty
+            - generic [ref=e463]:
+              - generic [ref=e465]:
+                - generic [ref=e466]: ₹5,299
+                - generic [ref=e467]: ₹15,000
+                - generic [ref=e468]: 64% off
+              - img [ref=e470]
+              - generic [ref=e472]:
+                - generic [ref=e473]: Upto
+                - generic [ref=e474]: ₹3,720
+                - generic [ref=e475]: Off on Exchange
+              - generic [ref=e478]: Bank Offer
+        - 'link "BESTON 109 cm (43 inch) Full HD LED Smart Android TV Add to Compare BESTON 109 cm (43 inch) Full HD LED Smart Android TV 4 7,378 Ratings & 892 Reviews • Full HD | LED • Model ID: BS43FHD • Launch Year: 2025 • Total Sound Output: 20 W • 2 Year warranty on Product , Onsite Warranty on Product and No Delivery Damages Covered ₹13,498 ₹23,999 43% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e483] [cursor=pointer]':
+          - /url: /beston-109-cm-43-inch-full-hd-led-smart-android-tv/p/itmc442d38770815?pid=TVSHATFH3XP4BFRZ&lid=LSTTVSHATFH3XP4BFRZROSRZW&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHATFH3XP4BFRZ.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e484]:
+            - img "BESTON 109 cm (43 inch) Full HD LED Smart Android TV" [ref=e488]
+            - generic [ref=e494]: Add to Compare
+            - img [ref=e497]
+          - generic [ref=e499]:
+            - generic [ref=e500]:
+              - generic [ref=e501]: BESTON 109 cm (43 inch) Full HD LED Smart Android TV
+              - generic [ref=e502]:
+                - generic [ref=e504]:
+                  - text: "4"
+                  - img [ref=e505]
+                - generic [ref=e507]: 7,378 Ratings & 892 Reviews
+              - list [ref=e509]:
+                - listitem [ref=e510]: • Full HD | LED
+                - listitem [ref=e511]: "• Model ID: BS43FHD"
+                - listitem [ref=e512]: "• Launch Year: 2025"
+                - listitem [ref=e513]: "• Total Sound Output: 20 W"
+                - listitem [ref=e514]: • 2 Year warranty on Product , Onsite Warranty on Product and No Delivery Damages Covered
+            - generic [ref=e515]:
+              - generic [ref=e517]:
+                - generic [ref=e518]: ₹13,498
+                - generic [ref=e519]: ₹23,999
+                - generic [ref=e520]: 43% off
+              - img [ref=e522]
+              - generic [ref=e525]: Hot Deal
+              - generic [ref=e527]:
+                - generic [ref=e528]: Upto
+                - generic [ref=e529]: ₹3,720
+                - generic [ref=e530]: Off on Exchange
+        - 'link "XIAOMI F Pro 138 cm (55 inch) QLED Ultra HD (4K) Smart Fire TV with 34W Box Speakers | Dolby Surround ... Add to Compare XIAOMI F Pro 138 cm (55 inch) QLED Ultra HD (4K) Smart Fire TV with 34W Box Speakers | Dolby Surround ... 4 17,670 Ratings & 1,031 Reviews • Ultra HD (4K) | QLED • Model ID: L55MB-FPIN • Launch Year: 2025 • Total Sound Output: 34 W • 1 year comprehensive warranty ₹35,999 ₹62,999 42% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e535] [cursor=pointer]':
+          - /url: /xiaomi-f-pro-138-cm-55-inch-qled-ultra-hd-4k-smart-fire-tv-34w-box-speakers-dolby-surround-sound-32gb-storage-filmmaker-mode-alexa-mi/p/itm75a67e5a59554?pid=TVSHCZC46UZJB8RZ&lid=LSTTVSHCZC46UZJB8RZXV8KG8&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=en_dMrUkIGxhKP01Yiz7j3dKW0aPSmdjrXoaY6AMf4oygwGAcUq1RcTLlr1Inx68vBv0t5a0uIgmSVBhczqZNNkITRKtQQVWB8eNWYNLe7VuyQ%3D&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e536]:
+            - img "XIAOMI F Pro 138 cm (55 inch) QLED Ultra HD (4K) Smart Fire TV with 34W Box Speakers | Dolby Surround ..." [ref=e540]
+            - generic [ref=e546]: Add to Compare
+            - img [ref=e549]
+          - generic [ref=e551]:
+            - generic [ref=e552]:
+              - img [ref=e554]
+              - generic [ref=e557]: XIAOMI F Pro 138 cm (55 inch) QLED Ultra HD (4K) Smart Fire TV with 34W Box Speakers | Dolby Surround ...
+              - generic [ref=e558]:
+                - generic [ref=e560]:
+                  - text: "4"
+                  - img [ref=e561]
+                - generic [ref=e563]: 17,670 Ratings & 1,031 Reviews
+              - list [ref=e565]:
+                - listitem [ref=e566]: • Ultra HD (4K) | QLED
+                - listitem [ref=e567]: "• Model ID: L55MB-FPIN"
+                - listitem [ref=e568]: "• Launch Year: 2025"
+                - listitem [ref=e569]: "• Total Sound Output: 34 W"
+                - listitem [ref=e570]: • 1 year comprehensive warranty
+            - generic [ref=e571]:
+              - generic [ref=e573]:
+                - generic [ref=e574]: ₹35,999
+                - generic [ref=e575]: ₹62,999
+                - generic [ref=e576]: 42% off
+              - img [ref=e578]
+              - generic [ref=e581]: Hot Deal
+              - generic [ref=e583]:
+                - generic [ref=e584]: Upto
+                - generic [ref=e585]: ₹3,720
+                - generic [ref=e586]: Off on Exchange
+        - 'link "Foxsky 127 cm (50 inch) Ultra HD (4K) Mini LED Smart WebOS TV 2026 Edition with 2.1CH Audio System Tun... Add to Compare Foxsky 127 cm (50 inch) Ultra HD (4K) Mini LED Smart WebOS TV 2026 Edition with 2.1CH Audio System Tun... 4.3 72 Ratings & 33 Reviews • Ultra HD (4K) | Mini LED • Model ID: FS50MINILED • Launch Year: 2026 • Total Sound Output: 40 W • 1 Year Comprehensive Warranty On Product ₹25,999 ₹59,999 56% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e591] [cursor=pointer]':
+          - /url: /foxsky-127-cm-50-inch-ultra-hd-4k-mini-led-smart-webos-tv-2026-2-1ch-audio-system-tuned-40w-native-144-refresh-rate-dolby-vision-atmos/p/itm37fa28a524bd9?pid=TVSHJF6YUMDFFPHR&lid=LSTTVSHJF6YUMDFFPHR5DLWJT&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=en_dMrUkIGxhKP01Yiz7j3dKW0aPSmdjrXoaY6AMf4oygw82TvZHsrgDjEZS4vSecK9L11TQV3fyAw7r4IF1XvtolF91k_NKRtsN7mkYTl-6AQ%3D&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e592]:
+            - img "Foxsky 127 cm (50 inch) Ultra HD (4K) Mini LED Smart WebOS TV 2026 Edition with 2.1CH Audio System Tun..." [ref=e596]
+            - generic [ref=e602]: Add to Compare
+            - img [ref=e605]
+          - generic [ref=e607]:
+            - generic [ref=e608]:
+              - img [ref=e610]
+              - generic [ref=e613]: Foxsky 127 cm (50 inch) Ultra HD (4K) Mini LED Smart WebOS TV 2026 Edition with 2.1CH Audio System Tun...
+              - generic [ref=e614]:
+                - generic [ref=e616]:
+                  - text: "4.3"
+                  - img [ref=e617]
+                - generic [ref=e619]: 72 Ratings & 33 Reviews
+              - list [ref=e621]:
+                - listitem [ref=e622]: • Ultra HD (4K) | Mini LED
+                - listitem [ref=e623]: "• Model ID: FS50MINILED"
+                - listitem [ref=e624]: "• Launch Year: 2026"
+                - listitem [ref=e625]: "• Total Sound Output: 40 W"
+                - listitem [ref=e626]: • 1 Year Comprehensive Warranty On Product
+            - generic [ref=e627]:
+              - generic [ref=e629]:
+                - generic [ref=e630]: ₹25,999
+                - generic [ref=e631]: ₹59,999
+                - generic [ref=e632]: 56% off
+              - img [ref=e634]
+              - generic [ref=e637]: Hot Deal
+              - generic [ref=e639]:
+                - generic [ref=e640]: Upto
+                - generic [ref=e641]: ₹3,720
+                - generic [ref=e642]: Off on Exchange
+        - 'link "iFFALCON by TCL U65 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos ... Add to Compare iFFALCON by TCL U65 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos ... 4.2 17,348 Ratings & 1,374 Reviews • Ultra HD (4K) | LED • Model ID: 55U65 • Launch Year: 2025 • Total Sound Output: 24 W • 1 Year Product Warranty ₹23,999 ₹66,599 63% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e647] [cursor=pointer]':
+          - /url: /iffalcon-tcl-u65-138-cm-55-inch-ultra-hd-4k-led-smart-google-tv-memc-dolby-vision-atmos-hva-panel-metallic-bezel-less/p/itm1ce4c7b82d0fe?pid=TVSHAVHGZQE32Z8J&lid=LSTTVSHAVHGZQE32Z8JFVEQJI&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHAVHGZQE32Z8J.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e648]:
+            - img "iFFALCON by TCL U65 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos ..." [ref=e652]
+            - generic [ref=e658]: Add to Compare
+            - img [ref=e661]
+          - generic [ref=e663]:
+            - generic [ref=e664]:
+              - generic [ref=e665]: iFFALCON by TCL U65 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos ...
+              - generic [ref=e666]:
+                - generic [ref=e668]:
+                  - text: "4.2"
+                  - img [ref=e669]
+                - generic [ref=e671]: 17,348 Ratings & 1,374 Reviews
+              - list [ref=e673]:
+                - listitem [ref=e674]: • Ultra HD (4K) | LED
+                - listitem [ref=e675]: "• Model ID: 55U65"
+                - listitem [ref=e676]: "• Launch Year: 2025"
+                - listitem [ref=e677]: "• Total Sound Output: 24 W"
+                - listitem [ref=e678]: • 1 Year Product Warranty
+            - generic [ref=e679]:
+              - generic [ref=e681]:
+                - generic [ref=e682]: ₹23,999
+                - generic [ref=e683]: ₹66,599
+                - generic [ref=e684]: 63% off
+              - img [ref=e686]
+              - generic [ref=e689]: Hot Deal
+              - generic [ref=e691]:
+                - generic [ref=e692]: Upto
+                - generic [ref=e693]: ₹3,720
+                - generic [ref=e694]: Off on Exchange
+        - 'link "VW Nano Sync Series 139 cm (55 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition Add to Compare VW Nano Sync Series 139 cm (55 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition 4.1 381 Ratings & 51 Reviews • Ultra HD (4K) | QLED • Model ID: VW55JQ1 • Launch Year: 2025 • Total Sound Output: 40 W • 1 year warranty on product ₹22,999 ₹64,999 64% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e699] [cursor=pointer]':
+          - /url: /vw-nano-sync-series-139-cm-55-inch-qled-ultra-hd-4k-smart-jiotele-os-tv-2025/p/itmbf3ae34d03d89?pid=TVSHHQCRXJD4HARE&lid=LSTTVSHHQCRXJD4HARETP3MKL&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHHQCRXJD4HARE.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e700]:
+            - img "VW Nano Sync Series 139 cm (55 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition" [ref=e704]
+            - generic [ref=e710]: Add to Compare
+            - img [ref=e713]
+          - generic [ref=e715]:
+            - generic [ref=e716]:
+              - generic [ref=e717]: VW Nano Sync Series 139 cm (55 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition
+              - generic [ref=e718]:
+                - generic [ref=e720]:
+                  - text: "4.1"
+                  - img [ref=e721]
+                - generic [ref=e723]: 381 Ratings & 51 Reviews
+              - list [ref=e725]:
+                - listitem [ref=e726]: • Ultra HD (4K) | QLED
+                - listitem [ref=e727]: "• Model ID: VW55JQ1"
+                - listitem [ref=e728]: "• Launch Year: 2025"
+                - listitem [ref=e729]: "• Total Sound Output: 40 W"
+                - listitem [ref=e730]: • 1 year warranty on product
+            - generic [ref=e731]:
+              - generic [ref=e733]:
+                - generic [ref=e734]: ₹22,999
+                - generic [ref=e735]: ₹64,999
+                - generic [ref=e736]: 64% off
+              - img [ref=e738]
+              - generic [ref=e741]: Hot Deal
+              - generic [ref=e743]:
+                - generic [ref=e744]: Upto
+                - generic [ref=e745]: ₹3,720
+                - generic [ref=e746]: Off on Exchange
+        - 'link "XIAOMI FX Series 138.68 cm (55 inch) Ultra HD (4K) LED Smart Fire TV with Alexa built-in | HDR 10 | 32... Add to Compare XIAOMI FX Series 138.68 cm (55 inch) Ultra HD (4K) LED Smart Fire TV with Alexa built-in | HDR 10 | 32... 4.3 86,677 Ratings & 6,346 Reviews • Ultra HD (4K) | LED • Model ID: L55MB-FIN • Launch Year: 2025 • Total Sound Output: 30 W • 1 year comprehensive warranty ₹32,990 ₹48,999 32% off Upto ₹3,720 Off on Exchange Bank Offer" [ref=e751] [cursor=pointer]':
+          - /url: /xiaomi-fx-series-138-68-cm-55-inch-ultra-hd-4k-led-smart-fire-tv-alexa-built-in-hdr-10-32-gb-storage-30w-dolby-audio-premium-metal-bezel-less-design-film-maker-mode-120-hz-game-booster-mi/p/itm1bd2d0efba1f7?pid=TVSHAVSFQGFGXMGY&lid=LSTTVSHAVSFQGFGXMGYVJMOLX&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHAVSFQGFGXMGY.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e752]:
+            - img "XIAOMI FX Series 138.68 cm (55 inch) Ultra HD (4K) LED Smart Fire TV with Alexa built-in | HDR 10 | 32..." [ref=e756]
+            - generic [ref=e762]: Add to Compare
+            - img [ref=e765]
+          - generic [ref=e767]:
+            - generic [ref=e768]:
+              - generic [ref=e769]: XIAOMI FX Series 138.68 cm (55 inch) Ultra HD (4K) LED Smart Fire TV with Alexa built-in | HDR 10 | 32...
+              - generic [ref=e770]:
+                - generic [ref=e772]:
+                  - text: "4.3"
+                  - img [ref=e773]
+                - generic [ref=e775]: 86,677 Ratings & 6,346 Reviews
+              - list [ref=e777]:
+                - listitem [ref=e778]: • Ultra HD (4K) | LED
+                - listitem [ref=e779]: "• Model ID: L55MB-FIN"
+                - listitem [ref=e780]: "• Launch Year: 2025"
+                - listitem [ref=e781]: "• Total Sound Output: 30 W"
+                - listitem [ref=e782]: • 1 year comprehensive warranty
+            - generic [ref=e783]:
+              - generic [ref=e785]:
+                - generic [ref=e786]: ₹32,990
+                - generic [ref=e787]: ₹48,999
+                - generic [ref=e788]: 32% off
+              - img [ref=e790]
+              - generic [ref=e792]:
+                - generic [ref=e793]: Upto
+                - generic [ref=e794]: ₹3,720
+                - generic [ref=e795]: Off on Exchange
+              - generic [ref=e798]: Bank Offer
+        - 'link "VW Nano Sync Series 126 cm (50 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition Add to Compare VW Nano Sync Series 126 cm (50 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition 4.1 381 Ratings & 51 Reviews • Ultra HD (4K) | QLED • Model ID: VW50JQ1 • Launch Year: 2025 • Total Sound Output: 40 W • 1.5 year warranty on product ₹21,499 ₹59,999 64% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e803] [cursor=pointer]':
+          - /url: /vw-nano-sync-series-126-cm-50-inch-qled-ultra-hd-4k-smart-jiotele-os-tv-2025/p/itm70ea8157cf4e3?pid=TVSHHQCREGZFNHNS&lid=LSTTVSHHQCREGZFNHNSQ4PZG7&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHHQCREGZFNHNS.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e804]:
+            - img "VW Nano Sync Series 126 cm (50 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition" [ref=e808]
+            - generic [ref=e814]: Add to Compare
+            - img [ref=e817]
+          - generic [ref=e819]:
+            - generic [ref=e820]:
+              - generic [ref=e821]: VW Nano Sync Series 126 cm (50 inch) QLED Ultra HD (4K) Smart JioTele OS TV 2025 Edition
+              - generic [ref=e822]:
+                - generic [ref=e824]:
+                  - text: "4.1"
+                  - img [ref=e825]
+                - generic [ref=e827]: 381 Ratings & 51 Reviews
+              - list [ref=e829]:
+                - listitem [ref=e830]: • Ultra HD (4K) | QLED
+                - listitem [ref=e831]: "• Model ID: VW50JQ1"
+                - listitem [ref=e832]: "• Launch Year: 2025"
+                - listitem [ref=e833]: "• Total Sound Output: 40 W"
+                - listitem [ref=e834]: • 1.5 year warranty on product
+            - generic [ref=e835]:
+              - generic [ref=e837]:
+                - generic [ref=e838]: ₹21,499
+                - generic [ref=e839]: ₹59,999
+                - generic [ref=e840]: 64% off
+              - img [ref=e842]
+              - generic [ref=e845]: Hot Deal
+              - generic [ref=e847]:
+                - generic [ref=e848]: Upto
+                - generic [ref=e849]: ₹3,720
+                - generic [ref=e850]: Off on Exchange
+        - 'link "acerpure Nitro Z Series 254 cm (100 inch) QLED Ultra HD (4K) Smart Google TV with 144 Hz GTV 3.0 AP100... Add to Compare acerpure Nitro Z Series 254 cm (100 inch) QLED Ultra HD (4K) Smart Google TV with 144 Hz GTV 3.0 AP100... 3.9 1,807 Ratings & 239 Reviews • Ultra HD (4K) | QLED • Model ID: AP100UG75PNTO5 • Launch Year: 2025 • Total Sound Output: 60 W • 1 Year Comprehensive Warranty On Product ₹1,99,999 ₹3,09,990 35% off Upto ₹3,720 Off on Exchange Bank Offer" [ref=e855] [cursor=pointer]':
+          - /url: /acerpure-nitro-z-series-254-cm-100-inch-qled-ultra-hd-4k-smart-google-tv-144-hz-gtv-3-0-ap100ug75pnto5-android-11-dolby-vision-dolby-atmos-60w-sound-allm-vrr-memc-gaming-wall-mount-dual-wi-fi/p/itm7af7650c6d56f?pid=TVSHGV9GUFSFHVWJ&lid=LSTTVSHGV9GUFSFHVWJEVOBV2&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=en_dMrUkIGxhKP01Yiz7j3dKW0aPSmdjrXoaY6AMf4oygxgcZFJtsh3kA05va2lwztnqDH_UuqByMtEzL8itjG7fA1kFuKnWaINrJqv3pKVKuU%3D&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e856]:
+            - img "acerpure Nitro Z Series 254 cm (100 inch) QLED Ultra HD (4K) Smart Google TV with 144 Hz GTV 3.0 AP100..." [ref=e860]
+            - generic [ref=e866]: Add to Compare
+            - img [ref=e869]
+          - generic [ref=e871]:
+            - generic [ref=e872]:
+              - img [ref=e874]
+              - generic [ref=e877]: acerpure Nitro Z Series 254 cm (100 inch) QLED Ultra HD (4K) Smart Google TV with 144 Hz GTV 3.0 AP100...
+              - generic [ref=e878]:
+                - generic [ref=e880]:
+                  - text: "3.9"
+                  - img [ref=e881]
+                - generic [ref=e883]: 1,807 Ratings & 239 Reviews
+              - list [ref=e885]:
+                - listitem [ref=e886]: • Ultra HD (4K) | QLED
+                - listitem [ref=e887]: "• Model ID: AP100UG75PNTO5"
+                - listitem [ref=e888]: "• Launch Year: 2025"
+                - listitem [ref=e889]: "• Total Sound Output: 60 W"
+                - listitem [ref=e890]: • 1 Year Comprehensive Warranty On Product
+            - generic [ref=e891]:
+              - generic [ref=e893]:
+                - generic [ref=e894]: ₹1,99,999
+                - generic [ref=e895]: ₹3,09,990
+                - generic [ref=e896]: 35% off
+              - img [ref=e898]
+              - generic [ref=e900]:
+                - generic [ref=e901]: Upto
+                - generic [ref=e902]: ₹3,720
+                - generic [ref=e903]: Off on Exchange
+              - generic [ref=e906]: Bank Offer
+        - 'link "acerpure NITRO 189.2 cm (75 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |... Add to Compare acerpure NITRO 189.2 cm (75 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |... 3.9 1,807 Ratings & 239 Reviews • Ultra HD (4K) | QLED • Model ID: AP75UG75PNTO5 • Launch Year: 2025 • Total Sound Output: 50 W • 1 Year Comprehensive Warranty On Product ₹52,599 ₹1,25,290 58% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e911] [cursor=pointer]':
+          - /url: /acerpure-nitro-189-2-cm-75-inch-qled-ultra-hd-4k-smart-google-tv-120-hz-gtv-5-0-android-14-dolby-vision-dolby-atmos-50w-sound-tuner-wi-fi-direct-allm-vrr-memc-karaoke-ai-gaming-wall-mount/p/itm9e0db86628a22?pid=TVSHFNYYVUTK5UA5&lid=LSTTVSHFNYYVUTK5UA5J4SSZY&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=en_dMrUkIGxhKP01Yiz7j3dKW0aPSmdjrXoaY6AMf4oygzWyFLwfnMfQgOK_iz5UlDPrq7E9BppjFiXXsVS95of_waKg8hQxVtMHqLTdaqeDbc%3D&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e912]:
+            - img "acerpure NITRO 189.2 cm (75 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |..." [ref=e916]
+            - generic [ref=e922]: Add to Compare
+            - img [ref=e925]
+          - generic [ref=e927]:
+            - generic [ref=e928]:
+              - img [ref=e930]
+              - generic [ref=e933]: acerpure NITRO 189.2 cm (75 inch) QLED Ultra HD (4K) Smart Google TV with 120 Hz GTV 5.0 |Android 14 |...
+              - generic [ref=e934]:
+                - generic [ref=e936]:
+                  - text: "3.9"
+                  - img [ref=e937]
+                - generic [ref=e939]: 1,807 Ratings & 239 Reviews
+              - list [ref=e941]:
+                - listitem [ref=e942]: • Ultra HD (4K) | QLED
+                - listitem [ref=e943]: "• Model ID: AP75UG75PNTO5"
+                - listitem [ref=e944]: "• Launch Year: 2025"
+                - listitem [ref=e945]: "• Total Sound Output: 50 W"
+                - listitem [ref=e946]: • 1 Year Comprehensive Warranty On Product
+            - generic [ref=e947]:
+              - generic [ref=e949]:
+                - generic [ref=e950]: ₹52,599
+                - generic [ref=e951]: ₹1,25,290
+                - generic [ref=e952]: 58% off
+              - generic [ref=e955]: Hot Deal
+              - generic [ref=e957]:
+                - generic [ref=e958]: Upto
+                - generic [ref=e959]: ₹3,720
+                - generic [ref=e960]: Off on Exchange
+        - 'link "MOTOROLA 80 cm (32 inch) QLED HD Ready Smart Google TV Add to Compare MOTOROLA 80 cm (32 inch) QLED HD Ready Smart Google TV 4.3 18,896 Ratings & 1,856 Reviews • HD Ready | QLED • Model ID: 32HDGQMDDAQ • Launch Year: 2025 • Total Sound Output: 40 W • 1 year Warranty for Manufacturing Defects ₹11,599 ₹26,999 57% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e965] [cursor=pointer]':
+          - /url: /motorola-80-cm-32-inch-qled-hd-ready-smart-google-tv/p/itm247d6554b407b?pid=TVSHC5F6TMNNUVXM&lid=LSTTVSHC5F6TMNNUVXMGGSM1Z&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHC5F6TMNNUVXM.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e966]:
+            - img "MOTOROLA 80 cm (32 inch) QLED HD Ready Smart Google TV" [ref=e970]
+            - generic [ref=e976]: Add to Compare
+            - img [ref=e979]
+          - generic [ref=e981]:
+            - generic [ref=e982]:
+              - generic [ref=e983]: MOTOROLA 80 cm (32 inch) QLED HD Ready Smart Google TV
+              - generic [ref=e984]:
+                - generic [ref=e986]:
+                  - text: "4.3"
+                  - img [ref=e987]
+                - generic [ref=e989]: 18,896 Ratings & 1,856 Reviews
+              - list [ref=e991]:
+                - listitem [ref=e992]: • HD Ready | QLED
+                - listitem [ref=e993]: "• Model ID: 32HDGQMDDAQ"
+                - listitem [ref=e994]: "• Launch Year: 2025"
+                - listitem [ref=e995]: "• Total Sound Output: 40 W"
+                - listitem [ref=e996]: • 1 year Warranty for Manufacturing Defects
+            - generic [ref=e997]:
+              - generic [ref=e999]:
+                - generic [ref=e1000]: ₹11,599
+                - generic [ref=e1001]: ₹26,999
+                - generic [ref=e1002]: 57% off
+              - img [ref=e1004]
+              - generic [ref=e1007]: Hot Deal
+              - generic [ref=e1009]:
+                - generic [ref=e1010]: Upto
+                - generic [ref=e1011]: ₹3,720
+                - generic [ref=e1012]: Off on Exchange
+        - 'link "VW Pro Series 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 2025 Edition Add to Compare VW Pro Series 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 2025 Edition 4.2 622 Ratings & 133 Reviews • Ultra HD (4K) | QLED • Model ID: VW55GQ1 • Launch Year: 2025 • Total Sound Output: 48 W • 1.5 year warranty on product ₹27,999 ₹59,999 53% off Hot Deal Only few left" [ref=e1017] [cursor=pointer]':
+          - /url: /vw-pro-series-139-cm-55-inch-qled-ultra-hd-4k-smart-google-tv-2025/p/itm8754b9b7e1fba?pid=TVSHHQCRVPZBNXEH&lid=LSTTVSHHQCRVPZBNXEHZSEW46&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHHQCRVPZBNXEH.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1018]:
+            - img "VW Pro Series 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 2025 Edition" [ref=e1022]
+            - generic [ref=e1028]: Add to Compare
+            - img [ref=e1031]
+          - generic [ref=e1033]:
+            - generic [ref=e1034]:
+              - generic [ref=e1035]: VW Pro Series 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 2025 Edition
+              - generic [ref=e1036]:
+                - generic [ref=e1038]:
+                  - text: "4.2"
+                  - img [ref=e1039]
+                - generic [ref=e1041]: 622 Ratings & 133 Reviews
+              - list [ref=e1043]:
+                - listitem [ref=e1044]: • Ultra HD (4K) | QLED
+                - listitem [ref=e1045]: "• Model ID: VW55GQ1"
+                - listitem [ref=e1046]: "• Launch Year: 2025"
+                - listitem [ref=e1047]: "• Total Sound Output: 48 W"
+                - listitem [ref=e1048]: • 1.5 year warranty on product
+            - generic [ref=e1049]:
+              - generic [ref=e1051]:
+                - generic [ref=e1052]: ₹27,999
+                - generic [ref=e1053]: ₹59,999
+                - generic [ref=e1054]: 53% off
+              - img [ref=e1056]
+              - generic [ref=e1059]: Hot Deal
+              - generic [ref=e1062]: Only few left
+        - 'link "Samsung 138 cm (55 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan... Add to Compare Samsung 138 cm (55 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan... 4.2 4,092 Ratings & 265 Reviews • Ultra HD (4K) | QLED • Model ID: QA55QEF6AULXL • Launch Year: 2025 • Total Sound Output: 20 W • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel) ₹47,990 ₹75,500 36% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1067] [cursor=pointer]':
+          - /url: /samsung-138-cm-55-inch-qled-ultra-hd-4k-smart-tizen-tv-vision-ai-100-color-volume-quantum-dot-real-sheet-hdr-pantone-validated-4k-upscaling-knox-security-100-free-channels/p/itm3580d1a4d06ec?pid=TVSHECAJ2HVHBMYH&lid=LSTTVSHECAJ2HVHBMYH3NQOEU&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHECAJ2HVHBMYH.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1068]:
+            - img "Samsung 138 cm (55 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan..." [ref=e1072]
+            - generic [ref=e1078]: Add to Compare
+            - img [ref=e1081]
+          - generic [ref=e1083]:
+            - generic [ref=e1084]:
+              - generic [ref=e1085]: Samsung 138 cm (55 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan...
+              - generic [ref=e1086]:
+                - generic [ref=e1088]:
+                  - text: "4.2"
+                  - img [ref=e1089]
+                - generic [ref=e1091]: 4,092 Ratings & 265 Reviews
+              - list [ref=e1093]:
+                - listitem [ref=e1094]: • Ultra HD (4K) | QLED
+                - listitem [ref=e1095]: "• Model ID: QA55QEF6AULXL"
+                - listitem [ref=e1096]: "• Launch Year: 2025"
+                - listitem [ref=e1097]: "• Total Sound Output: 20 W"
+                - listitem [ref=e1098]: • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel)
+            - generic [ref=e1099]:
+              - generic [ref=e1101]:
+                - generic [ref=e1102]: ₹47,990
+                - generic [ref=e1103]: ₹75,500
+                - generic [ref=e1104]: 36% off
+              - img [ref=e1106]
+              - generic [ref=e1109]: Hot Deal
+              - generic [ref=e1111]:
+                - generic [ref=e1112]: Upto
+                - generic [ref=e1113]: ₹3,720
+                - generic [ref=e1114]: Off on Exchange
+        - 'link "Vu GloQLED 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV Add to Compare Vu GloQLED 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 4.1 1,307 Ratings & 127 Reviews • Ultra HD (4K) | QLED • Model ID: 55GLOQLED25 • Launch Year: 2025 • Total Sound Output: 24 W • 1 Year Manufaturer Warranty, In the 1st year of the warranty, panel, parts, and labor costs are covered. ₹33,999 ₹46,000 26% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1119] [cursor=pointer]':
+          - /url: /vu-gloqled-139-cm-55-inch-qled-ultra-hd-4k-smart-google-tv/p/itm74b342bb200d7?pid=TVSHE3AKHYQX3QCY&lid=LSTTVSHE3AKHYQX3QCYXQNXLQ&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHE3AKHYQX3QCY.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1120]:
+            - img "Vu GloQLED 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV" [ref=e1124]
+            - generic [ref=e1130]: Add to Compare
+            - img [ref=e1133]
+          - generic [ref=e1135]:
+            - generic [ref=e1136]:
+              - generic [ref=e1137]: Vu GloQLED 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV
+              - generic [ref=e1138]:
+                - generic [ref=e1140]:
+                  - text: "4.1"
+                  - img [ref=e1141]
+                - generic [ref=e1143]: 1,307 Ratings & 127 Reviews
+              - list [ref=e1145]:
+                - listitem [ref=e1146]: • Ultra HD (4K) | QLED
+                - listitem [ref=e1147]: "• Model ID: 55GLOQLED25"
+                - listitem [ref=e1148]: "• Launch Year: 2025"
+                - listitem [ref=e1149]: "• Total Sound Output: 24 W"
+                - listitem [ref=e1150]: • 1 Year Manufaturer Warranty, In the 1st year of the warranty, panel, parts, and labor costs are covered.
+            - generic [ref=e1151]:
+              - generic [ref=e1153]:
+                - generic [ref=e1154]: ₹33,999
+                - generic [ref=e1155]: ₹46,000
+                - generic [ref=e1156]: 26% off
+              - img [ref=e1158]
+              - generic [ref=e1161]: Hot Deal
+              - generic [ref=e1163]:
+                - generic [ref=e1164]: Upto
+                - generic [ref=e1165]: ₹3,720
+                - generic [ref=e1166]: Off on Exchange
+        - 'link "Samsung 108 cm (43 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan... Add to Compare Samsung 108 cm (43 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan... 4.2 4,092 Ratings & 265 Reviews • Ultra HD (4K) | QLED • Model ID: QA43QEF6AULXL • Launch Year: 2025 • Total Sound Output: 20 W • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel) ₹35,990 ₹50,600 28% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1171] [cursor=pointer]':
+          - /url: /samsung-108-cm-43-inch-qled-ultra-hd-4k-smart-tizen-tv-vision-ai-100-color-volume-quantum-dot-real-sheet-hdr-pantone-validated-4k-upscaling-knox-security-100-free-channels/p/itm2a1a13358a704?pid=TVSHECAJXJZDH33Z&lid=LSTTVSHECAJXJZDH33ZODL5MD&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHECAJXJZDH33Z.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1172]:
+            - img "Samsung 108 cm (43 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan..." [ref=e1176]
+            - generic [ref=e1182]: Add to Compare
+            - img [ref=e1185]
+          - generic [ref=e1187]:
+            - generic [ref=e1188]:
+              - generic [ref=e1189]: Samsung 108 cm (43 inch) QLED Ultra HD (4K) Smart Tizen TV with Vision AI |100% Color Volume with Quan...
+              - generic [ref=e1190]:
+                - generic [ref=e1192]:
+                  - text: "4.2"
+                  - img [ref=e1193]
+                - generic [ref=e1195]: 4,092 Ratings & 265 Reviews
+              - list [ref=e1197]:
+                - listitem [ref=e1198]: • Ultra HD (4K) | QLED
+                - listitem [ref=e1199]: "• Model ID: QA43QEF6AULXL"
+                - listitem [ref=e1200]: "• Launch Year: 2025"
+                - listitem [ref=e1201]: "• Total Sound Output: 20 W"
+                - listitem [ref=e1202]: • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel)
+            - generic [ref=e1203]:
+              - generic [ref=e1205]:
+                - generic [ref=e1206]: ₹35,990
+                - generic [ref=e1207]: ₹50,600
+                - generic [ref=e1208]: 28% off
+              - img [ref=e1210]
+              - generic [ref=e1213]: Hot Deal
+              - generic [ref=e1215]:
+                - generic [ref=e1216]: Upto
+                - generic [ref=e1217]: ₹3,720
+                - generic [ref=e1218]: Off on Exchange
+        - 'link "realme TechLife 139 cm (55 inch) Ultra HD (4K) LED Smart Google TV Add to Compare realme TechLife 139 cm (55 inch) Ultra HD (4K) LED Smart Google TV 4.3 5,176 Ratings & 417 Reviews • Ultra HD (4K) | LED • Model ID: 55UHDGDRDDVB • Launch Year: 2025 • Total Sound Output: 30 W • 1 year Warranty for Manufacturing Defects (Applicable only in INDIA) ₹28,499 ₹63,599 55% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1223] [cursor=pointer]':
+          - /url: /realme-techlife-139-cm-55-inch-ultra-hd-4k-led-smart-google-tv/p/itm5e6333ceda8d3?pid=TVSHD842GJHM2C2Z&lid=LSTTVSHD842GJHM2C2ZPY4XLC&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHD842GJHM2C2Z.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1224]:
+            - img "realme TechLife 139 cm (55 inch) Ultra HD (4K) LED Smart Google TV" [ref=e1228]
+            - generic [ref=e1234]: Add to Compare
+            - img [ref=e1237]
+          - generic [ref=e1239]:
+            - generic [ref=e1240]:
+              - generic [ref=e1241]: realme TechLife 139 cm (55 inch) Ultra HD (4K) LED Smart Google TV
+              - generic [ref=e1242]:
+                - generic [ref=e1244]:
+                  - text: "4.3"
+                  - img [ref=e1245]
+                - generic [ref=e1247]: 5,176 Ratings & 417 Reviews
+              - list [ref=e1249]:
+                - listitem [ref=e1250]: • Ultra HD (4K) | LED
+                - listitem [ref=e1251]: "• Model ID: 55UHDGDRDDVB"
+                - listitem [ref=e1252]: "• Launch Year: 2025"
+                - listitem [ref=e1253]: "• Total Sound Output: 30 W"
+                - listitem [ref=e1254]: • 1 year Warranty for Manufacturing Defects (Applicable only in INDIA)
+            - generic [ref=e1255]:
+              - generic [ref=e1257]:
+                - generic [ref=e1258]: ₹28,499
+                - generic [ref=e1259]: ₹63,599
+                - generic [ref=e1260]: 55% off
+              - img [ref=e1262]
+              - generic [ref=e1265]: Hot Deal
+              - generic [ref=e1267]:
+                - generic [ref=e1268]: Upto
+                - generic [ref=e1269]: ₹3,720
+                - generic [ref=e1270]: Off on Exchange
+        - 'link "TCL 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos | HVA Panel & Me... Add to Compare TCL 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos | HVA Panel & Me... 4.1 5,890 Ratings & 402 Reviews • Ultra HD (4K) | LED • Model ID: 55V6C • Launch Year: 2025 • Total Sound Output: 24 W • 2 Years Product Warranty ₹32,990 ₹70,190 52% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1275] [cursor=pointer]':
+          - /url: /tcl-138-cm-55-inch-ultra-hd-4k-led-smart-google-tv-memc-dolby-vision-atmos-hva-panel-metallic-bezel-less/p/itm2637cadc573cd?pid=TVSHAHCUJNAY8B8G&lid=LSTTVSHAHCUJNAY8B8GZMJPYM&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHAHCUJNAY8B8G.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1276]:
+            - img "TCL 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos | HVA Panel & Me..." [ref=e1280]
+            - generic [ref=e1286]: Add to Compare
+            - img [ref=e1289]
+          - generic [ref=e1291]:
+            - generic [ref=e1292]:
+              - generic [ref=e1293]: TCL 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos | HVA Panel & Me...
+              - generic [ref=e1294]:
+                - generic [ref=e1296]:
+                  - text: "4.1"
+                  - img [ref=e1297]
+                - generic [ref=e1299]: 5,890 Ratings & 402 Reviews
+              - list [ref=e1301]:
+                - listitem [ref=e1302]: • Ultra HD (4K) | LED
+                - listitem [ref=e1303]: "• Model ID: 55V6C"
+                - listitem [ref=e1304]: "• Launch Year: 2025"
+                - listitem [ref=e1305]: "• Total Sound Output: 24 W"
+                - listitem [ref=e1306]: • 2 Years Product Warranty
+            - generic [ref=e1307]:
+              - generic [ref=e1309]:
+                - generic [ref=e1310]: ₹32,990
+                - generic [ref=e1311]: ₹70,190
+                - generic [ref=e1312]: 52% off
+              - img [ref=e1314]
+              - generic [ref=e1317]: Hot Deal
+              - generic [ref=e1319]:
+                - generic [ref=e1320]: Upto
+                - generic [ref=e1321]: ₹3,720
+                - generic [ref=e1322]: Off on Exchange
+        - 'link "Samsung Crystal 4K Vivid 138 cm (55 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo... Add to Compare Samsung Crystal 4K Vivid 138 cm (55 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo... 4.3 26,560 Ratings & 1,686 Reviews • Ultra HD (4K) | LED • Model ID: UA55DUE70BKLXL • Launch Year: 2024 • Total Sound Output: 20 W • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel) ₹35,989 ₹59,800 39% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1327] [cursor=pointer]':
+          - /url: /samsung-crystal-4k-vivid-138-cm-55-inch-ultra-hd-4k-led-smart-tizen-tv-upscaling-purcolor-voice-ready-knox-security/p/itmbac55b98d739d?pid=TVSGYWKBQFHPGMNH&lid=LSTTVSGYWKBQFHPGMNH23EXGG&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSGYWKBQFHPGMNH.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1328]:
+            - img "Samsung Crystal 4K Vivid 138 cm (55 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo..." [ref=e1332]
+            - generic [ref=e1338]: Add to Compare
+            - img [ref=e1341]
+          - generic [ref=e1343]:
+            - generic [ref=e1344]:
+              - generic [ref=e1345]: Samsung Crystal 4K Vivid 138 cm (55 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo...
+              - generic [ref=e1346]:
+                - generic [ref=e1348]:
+                  - text: "4.3"
+                  - img [ref=e1349]
+                - generic [ref=e1351]: 26,560 Ratings & 1,686 Reviews
+              - list [ref=e1353]:
+                - listitem [ref=e1354]: • Ultra HD (4K) | LED
+                - listitem [ref=e1355]: "• Model ID: UA55DUE70BKLXL"
+                - listitem [ref=e1356]: "• Launch Year: 2024"
+                - listitem [ref=e1357]: "• Total Sound Output: 20 W"
+                - listitem [ref=e1358]: • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel)
+            - generic [ref=e1359]:
+              - generic [ref=e1361]:
+                - generic [ref=e1362]: ₹35,989
+                - generic [ref=e1363]: ₹59,800
+                - generic [ref=e1364]: 39% off
+              - img [ref=e1366]
+              - generic [ref=e1369]: Hot Deal
+              - generic [ref=e1371]:
+                - generic [ref=e1372]: Upto
+                - generic [ref=e1373]: ₹3,720
+                - generic [ref=e1374]: Off on Exchange
+        - 'link "Vu GloQLED 126 cm (50 inch) QLED Ultra HD (4K) Smart Google TV Add to Compare Vu GloQLED 126 cm (50 inch) QLED Ultra HD (4K) Smart Google TV 4.1 1,307 Ratings & 127 Reviews • Ultra HD (4K) | QLED • Model ID: 50GLOQLED25 • Launch Year: 2025 • Total Sound Output: 24 W • 1 Year Manufaturer Warranty, In the 1st year of the warranty, panel, parts, and labor costs are covered. ₹28,599 ₹42,000 31% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1379] [cursor=pointer]':
+          - /url: /vu-gloqled-126-cm-50-inch-qled-ultra-hd-4k-smart-google-tv/p/itmd881e09b7d6d7?pid=TVSHE3AKP88WM32U&lid=LSTTVSHE3AKP88WM32ULPZI5U&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHE3AKP88WM32U.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1380]:
+            - img "Vu GloQLED 126 cm (50 inch) QLED Ultra HD (4K) Smart Google TV" [ref=e1384]
+            - generic [ref=e1390]: Add to Compare
+            - img [ref=e1393]
+          - generic [ref=e1395]:
+            - generic [ref=e1396]:
+              - generic [ref=e1397]: Vu GloQLED 126 cm (50 inch) QLED Ultra HD (4K) Smart Google TV
+              - generic [ref=e1398]:
+                - generic [ref=e1400]:
+                  - text: "4.1"
+                  - img [ref=e1401]
+                - generic [ref=e1403]: 1,307 Ratings & 127 Reviews
+              - list [ref=e1405]:
+                - listitem [ref=e1406]: • Ultra HD (4K) | QLED
+                - listitem [ref=e1407]: "• Model ID: 50GLOQLED25"
+                - listitem [ref=e1408]: "• Launch Year: 2025"
+                - listitem [ref=e1409]: "• Total Sound Output: 24 W"
+                - listitem [ref=e1410]: • 1 Year Manufaturer Warranty, In the 1st year of the warranty, panel, parts, and labor costs are covered.
+            - generic [ref=e1411]:
+              - generic [ref=e1413]:
+                - generic [ref=e1414]: ₹28,599
+                - generic [ref=e1415]: ₹42,000
+                - generic [ref=e1416]: 31% off
+              - img [ref=e1418]
+              - generic [ref=e1421]: Hot Deal
+              - generic [ref=e1423]:
+                - generic [ref=e1424]: Upto
+                - generic [ref=e1425]: ₹3,720
+                - generic [ref=e1426]: Off on Exchange
+        - 'link "Infinix 140 cm (55 inch) QLED Ultra HD (4K) Smart Google TV Add to Compare Infinix 140 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 4 3,353 Ratings & 302 Reviews • Ultra HD (4K) | QLED • Model ID: 55GU1Q/55GU3Q • Launch Year: 2024 • Total Sound Output: 40 W • 1 Year Warranty on Product ₹30,999 ₹36,999 16% off Hot Deal Upto ₹3,720 Off on Exchange" [ref=e1431] [cursor=pointer]':
+          - /url: /infinix-140-cm-55-inch-qled-ultra-hd-4k-smart-google-tv/p/itmf5b7c5d1ce39a?pid=TVSH46HKNARSGJGY&lid=LSTTVSH46HKNARSGJGYCBHQFL&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSH46HKNARSGJGY.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1432]:
+            - img "Infinix 140 cm (55 inch) QLED Ultra HD (4K) Smart Google TV" [ref=e1436]
+            - generic [ref=e1442]: Add to Compare
+            - img [ref=e1445]
+          - generic [ref=e1447]:
+            - generic [ref=e1448]:
+              - generic [ref=e1449]: Infinix 140 cm (55 inch) QLED Ultra HD (4K) Smart Google TV
+              - generic [ref=e1450]:
+                - generic [ref=e1452]:
+                  - text: "4"
+                  - img [ref=e1453]
+                - generic [ref=e1455]: 3,353 Ratings & 302 Reviews
+              - list [ref=e1457]:
+                - listitem [ref=e1458]: • Ultra HD (4K) | QLED
+                - listitem [ref=e1459]: "• Model ID: 55GU1Q/55GU3Q"
+                - listitem [ref=e1460]: "• Launch Year: 2024"
+                - listitem [ref=e1461]: "• Total Sound Output: 40 W"
+                - listitem [ref=e1462]: • 1 Year Warranty on Product
+            - generic [ref=e1463]:
+              - generic [ref=e1465]:
+                - generic [ref=e1466]: ₹30,999
+                - generic [ref=e1467]: ₹36,999
+                - generic [ref=e1468]: 16% off
+              - img [ref=e1470]
+              - generic [ref=e1473]: Hot Deal
+              - generic [ref=e1475]:
+                - generic [ref=e1476]: Upto
+                - generic [ref=e1477]: ₹3,720
+                - generic [ref=e1478]: Off on Exchange
+        - 'link "Bush 109 cm (43 inch) Ultra HD (4K) LED Smart Android Based TV Add to Compare Bush 109 cm (43 inch) Ultra HD (4K) LED Smart Android Based TV • Ultra HD (4K) | LED • Model ID: BH43S YPRO/U • Launch Year: 2025 • Total Sound Output: 20 W • 1 Year Product Warranty ₹19,999 ₹41,990 52% off Upto ₹3,720 Off on Exchange Bank Offer" [ref=e1483] [cursor=pointer]':
+          - /url: /bush-109-cm-43-inch-ultra-hd-4k-led-smart-android-based-tv/p/itm1c7b4a0626746?pid=TVSHKAJPTBAGDR4S&lid=LSTTVSHKAJPTBAGDR4SDEZUTO&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSHKAJPTBAGDR4S.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1484]:
+            - img "Bush 109 cm (43 inch) Ultra HD (4K) LED Smart Android Based TV" [ref=e1488]
+            - generic [ref=e1494]: Add to Compare
+            - img [ref=e1497]
+          - generic [ref=e1499]:
+            - generic [ref=e1500]:
+              - generic [ref=e1501]: Bush 109 cm (43 inch) Ultra HD (4K) LED Smart Android Based TV
+              - list [ref=e1503]:
+                - listitem [ref=e1504]: • Ultra HD (4K) | LED
+                - listitem [ref=e1505]: "• Model ID: BH43S YPRO/U"
+                - listitem [ref=e1506]: "• Launch Year: 2025"
+                - listitem [ref=e1507]: "• Total Sound Output: 20 W"
+                - listitem [ref=e1508]: • 1 Year Product Warranty
+            - generic [ref=e1509]:
+              - generic [ref=e1511]:
+                - generic [ref=e1512]: ₹19,999
+                - generic [ref=e1513]: ₹41,990
+                - generic [ref=e1514]: 52% off
+              - img [ref=e1516]
+              - generic [ref=e1518]:
+                - generic [ref=e1519]: Upto
+                - generic [ref=e1520]: ₹3,720
+                - generic [ref=e1521]: Off on Exchange
+              - generic [ref=e1524]: Bank Offer
+        - 'link "Samsung Crystal 4K Vivid 125 cm (50 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo... Add to Compare Samsung Crystal 4K Vivid 125 cm (50 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo... 4.3 26,560 Ratings & 1,686 Reviews • Ultra HD (4K) | LED • Model ID: UA50DUE70BKLXL • Launch Year: 2024 • Total Sound Output: 20 W • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel) ₹37,990 ₹57,000 33% off Only 2 left Upto ₹3,720 Off on Exchange" [ref=e1529] [cursor=pointer]':
+          - /url: /samsung-crystal-4k-vivid-125-cm-50-inch-ultra-hd-4k-led-smart-tizen-tv-upscaling-purcolor-auto-game-mode-q-symphony-voice-ready-knox-security/p/itmbac55b98d739d?pid=TVSGYWKBQXX6DBZZ&lid=LSTTVSGYWKBQXX6DBZZPSLL3S&marketplace=FLIPKART&q=smart&store=ckf%2Fczl&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=c96b03ac-d9e4-44f4-849b-09ebc43e0d39.TVSGYWKBQXX6DBZZ.SEARCH&ppt=hp&ppn=homepage&ssid=p4pbi5jpy80000001777365787171&qH=8c319f28d81d1527&ov_redirect=true
+          - generic [ref=e1530]:
+            - img "Samsung Crystal 4K Vivid 125 cm (50 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo..." [ref=e1534]
+            - generic [ref=e1540]: Add to Compare
+            - img [ref=e1543]
+          - generic [ref=e1545]:
+            - generic [ref=e1546]:
+              - generic [ref=e1547]: Samsung Crystal 4K Vivid 125 cm (50 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo...
+              - generic [ref=e1548]:
+                - generic [ref=e1550]:
+                  - text: "4.3"
+                  - img [ref=e1551]
+                - generic [ref=e1553]: 26,560 Ratings & 1,686 Reviews
+              - list [ref=e1555]:
+                - listitem [ref=e1556]: • Ultra HD (4K) | LED
+                - listitem [ref=e1557]: "• Model ID: UA50DUE70BKLXL"
+                - listitem [ref=e1558]: "• Launch Year: 2024"
+                - listitem [ref=e1559]: "• Total Sound Output: 20 W"
+                - listitem [ref=e1560]: • 2 Year Warranty (1 Year Standard Warranty + 1 Year additional warranty on Panel)
+            - generic [ref=e1561]:
+              - generic [ref=e1563]:
+                - generic [ref=e1564]: ₹37,990
+                - generic [ref=e1565]: ₹57,000
+                - generic [ref=e1566]: 33% off
+              - img [ref=e1568]
+              - generic [ref=e1571]: Only 2 left
+              - generic [ref=e1573]:
+                - generic [ref=e1574]: Upto
+                - generic [ref=e1575]: ₹3,720
+                - generic [ref=e1576]: Off on Exchange
+        - generic [ref=e1579]:
+          - generic [ref=e1580]: Page 1 of 40
+          - navigation [ref=e1581]:
+            - link "1" [ref=e1582] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=1
+            - link "2" [ref=e1583] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+            - link "3" [ref=e1584] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=3
+            - link "4" [ref=e1585] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=4
+            - link "5" [ref=e1586] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=5
+            - link "6" [ref=e1587] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=6
+            - link "7" [ref=e1588] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=7
+            - link "8" [ref=e1589] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=8
+            - link "9" [ref=e1590] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=9
+            - link "10" [ref=e1591] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=10
+            - link "Next" [ref=e1592] [cursor=pointer]:
+              - /url: /search?q=smart&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off&page=2
+        - generic [ref=e1594]:
+          - text: Did you find what you were looking for?
+          - generic [ref=e1595]:
+            - generic [ref=e1596] [cursor=pointer]: "Yes"
+            - generic [ref=e1597] [cursor=pointer]: "No"
+    - generic [ref=e1599]:
+      - generic [ref=e1600]: Reviews for Popular Televisions
+      - generic [ref=e1601]:
+        - generic [ref=e1602]:
+          - generic [ref=e1604]:
+            - img "VW Pro Series 139 cm (55 inch) QLED Ultra HD (4K) Smart Google TV 2025 Edition"
+          - generic [ref=e1605]:
+            - link "1. VW Pro Series 139 cm (55 in... 4.2 622 Ratings&133 Reviews ₹27,999 53% off" [ref=e1606] [cursor=pointer]:
+              - /url: /vw-pro-series-139-cm-55-inch-qled-ultra-hd-4k-smart-google-tv-2025/p/itm8754b9b7e1fba?pid=TVSHHQCRVPZBNXEH&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1608]: 1. VW Pro Series 139 cm (55 in...
+              - generic [ref=e1609]:
+                - generic [ref=e1610]:
+                  - text: "4.2"
+                  - img [ref=e1611]
+                - generic [ref=e1612]:
+                  - text: 622 Ratings
+                  - generic [ref=e1613]: "&133 Reviews"
+              - generic [ref=e1615]:
+                - generic [ref=e1616]: ₹27,999
+                - generic [ref=e1617]: 53% off
+            - list [ref=e1618]:
+              - listitem [ref=e1619]: Ultra HD (4K) | QLED
+              - listitem [ref=e1620]: "Model ID: VW55GQ1"
+              - listitem [ref=e1621]: "Launch Year: 2025"
+        - generic [ref=e1622]:
+          - generic [ref=e1623]: Most Helpful Review
+          - generic [ref=e1625]:
+            - generic [ref=e1626]:
+              - generic [ref=e1627]:
+                - text: "5"
+                - img [ref=e1628]
+              - paragraph [ref=e1629]: Simply awesome
+            - generic [ref=e1632]:
+              - generic [ref=e1633]: I recently purchased a VW TV and I am very satisfied with the quality of the product. The picture clarity is excellent, sound is very good, and it is easy to...
+              - generic [ref=e1634] [cursor=pointer]: Read full review
+            - generic [ref=e1636]:
+              - paragraph [ref=e1637]: Sharat Mankame
+              - img [ref=e1638]
+              - paragraph [ref=e1642]: Certified Buyer
+              - paragraph [ref=e1643]: 3 months ago
+        - generic [ref=e1644]:
+          - generic [ref=e1645]: Recent Review
+          - generic [ref=e1647]:
+            - generic [ref=e1648]:
+              - generic [ref=e1649]:
+                - text: "1"
+                - img [ref=e1650]
+              - paragraph [ref=e1651]: Terrible product
+            - generic [ref=e1655]: Not support DD Free dish antenna 📡 only RF support
+            - generic [ref=e1657]:
+              - paragraph [ref=e1658]: Chittranjan Bedia
+              - img [ref=e1659]
+              - paragraph [ref=e1663]: Certified Buyer
+              - paragraph [ref=e1664]: Today
+      - generic [ref=e1665]:
+        - generic [ref=e1666]:
+          - generic [ref=e1668]:
+            - img "XIAOMI F Pro 138 cm (55 inch) QLED Ultra HD (4K) Smart Fire TV with 34W Box Speakers | Dolby Surround Sound| 32GB Storage | Filmmaker Mode| Alexa | Mi TV"
+          - generic [ref=e1669]:
+            - link "2. XIAOMI F Pro 138 cm (55 inc... 4 17,670 Ratings&1,031 Reviews ₹35,999 42% off" [ref=e1670] [cursor=pointer]:
+              - /url: /xiaomi-f-pro-138-cm-55-inch-qled-ultra-hd-4k-smart-fire-tv-34w-box-speakers-dolby-surround-sound-32gb-storage-filmmaker-mode-alexa-mi/p/itm75a67e5a59554?pid=TVSHCZC46UZJB8RZ&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1672]: 2. XIAOMI F Pro 138 cm (55 inc...
+              - generic [ref=e1673]:
+                - generic [ref=e1674]:
+                  - text: "4"
+                  - img [ref=e1675]
+                - generic [ref=e1676]:
+                  - text: 17,670 Ratings
+                  - generic [ref=e1677]: "&1,031 Reviews"
+              - generic [ref=e1679]:
+                - generic [ref=e1680]: ₹35,999
+                - generic [ref=e1681]: 42% off
+            - list [ref=e1682]:
+              - listitem [ref=e1683]: Ultra HD (4K) | QLED
+              - listitem [ref=e1684]: "Model ID: L55MB-FPIN"
+              - listitem [ref=e1685]: "Launch Year: 2025"
+        - generic [ref=e1686]:
+          - generic [ref=e1687]: Most Helpful Review
+          - generic [ref=e1689]:
+            - generic [ref=e1690]:
+              - generic [ref=e1691]:
+                - text: "5"
+                - img [ref=e1692]
+              - paragraph [ref=e1693]: Brilliant
+            - generic [ref=e1697]:
+              - text: Picture Qulity awsome
+              - text: Actul fire tv smooth performance
+              - text: Sound Dolby very good
+            - generic [ref=e1699]:
+              - paragraph [ref=e1700]: nikhil chavan
+              - img [ref=e1701]
+              - paragraph [ref=e1705]: Certified Buyer
+              - paragraph [ref=e1706]: 9 months ago
+        - generic [ref=e1707]:
+          - generic [ref=e1708]: Recent Review
+          - generic [ref=e1710]:
+            - generic [ref=e1711]:
+              - generic [ref=e1712]:
+                - text: "1"
+                - img [ref=e1713]
+              - paragraph [ref=e1714]: Useless product
+            - generic [ref=e1718]: Worst ever dont buy on flipkart
+            - generic [ref=e1720]:
+              - paragraph [ref=e1721]: Aravindhan AR
+              - img [ref=e1722]
+              - paragraph [ref=e1726]: Certified Buyer
+              - paragraph [ref=e1727]: Today
+      - generic [ref=e1728]:
+        - generic [ref=e1729]:
+          - generic [ref=e1731]:
+            - img "iFFALCON by TCL U65 138 cm (55 inch) Ultra HD (4K) LED Smart Google TV with MEMC | Dolby Vision-Atmos | HVA Panel & Metallic Bezel-Less"
+          - generic [ref=e1732]:
+            - link "3. iFFALCON by TCL U65 138 cm ... 4.2 17,348 Ratings&1,374 Reviews ₹23,999 63% off" [ref=e1733] [cursor=pointer]:
+              - /url: /iffalcon-tcl-u65-138-cm-55-inch-ultra-hd-4k-led-smart-google-tv-memc-dolby-vision-atmos-hva-panel-metallic-bezel-less/p/itm1ce4c7b82d0fe?pid=TVSHAVHGZQE32Z8J&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1735]: 3. iFFALCON by TCL U65 138 cm ...
+              - generic [ref=e1736]:
+                - generic [ref=e1737]:
+                  - text: "4.2"
+                  - img [ref=e1738]
+                - generic [ref=e1739]:
+                  - text: 17,348 Ratings
+                  - generic [ref=e1740]: "&1,374 Reviews"
+              - generic [ref=e1742]:
+                - generic [ref=e1743]: ₹23,999
+                - generic [ref=e1744]: 63% off
+            - list [ref=e1745]:
+              - listitem [ref=e1746]: Ultra HD (4K) | LED
+              - listitem [ref=e1747]: "Model ID: 55U65"
+              - listitem [ref=e1748]: "Launch Year: 2025"
+        - generic [ref=e1749]:
+          - generic [ref=e1750]: Most Helpful Review
+          - generic [ref=e1752]:
+            - generic [ref=e1753]:
+              - generic [ref=e1754]:
+                - text: "5"
+                - img [ref=e1755]
+              - paragraph [ref=e1756]: Brilliant
+            - generic [ref=e1759]:
+              - generic [ref=e1760]:
+                - text: Osum, everything is perfect. Sound and picture quality are perfect.
+                - text: Beleive me its better than realme tv.
+                - text: This is 2025 model and buy it blindly. No one will...
+              - generic [ref=e1761] [cursor=pointer]: Read full review
+            - generic [ref=e1763]:
+              - paragraph [ref=e1764]: Rahul Paladia
+              - img [ref=e1765]
+              - paragraph [ref=e1769]: Certified Buyer
+              - paragraph [ref=e1770]: 11 months ago
+        - generic [ref=e1771]:
+          - generic [ref=e1772]: Recent Review
+          - generic [ref=e1774]:
+            - generic [ref=e1775]:
+              - generic [ref=e1776]:
+                - text: "5"
+                - img [ref=e1777]
+              - paragraph [ref=e1778]: Super!
+            - generic [ref=e1781]:
+              - generic [ref=e1782]: Everything is good. I was afraid of being cheated or about the product but hopefully everything was good and this smart tv is all rounder. 55 inch tcl iffalc...
+              - generic [ref=e1783] [cursor=pointer]: Read full review
+            - generic [ref=e1785]:
+              - paragraph [ref=e1786]: DINKER Bishnoi
+              - img [ref=e1787]
+              - paragraph [ref=e1791]: Certified Buyer
+              - paragraph [ref=e1792]: Today
+      - generic [ref=e1793]:
+        - generic [ref=e1794]:
+          - generic [ref=e1796]:
+            - img "Infinix 140 cm (55 inch) QLED Ultra HD (4K) Smart Google TV"
+          - generic [ref=e1797]:
+            - link "4. Infinix 140 cm (55 inch) QL... 4 3,353 Ratings&302 Reviews ₹30,999 16% off" [ref=e1798] [cursor=pointer]:
+              - /url: /infinix-140-cm-55-inch-qled-ultra-hd-4k-smart-google-tv/p/itmf5b7c5d1ce39a?pid=TVSH46HKNARSGJGY&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1800]: 4. Infinix 140 cm (55 inch) QL...
+              - generic [ref=e1801]:
+                - generic [ref=e1802]:
+                  - text: "4"
+                  - img [ref=e1803]
+                - generic [ref=e1804]:
+                  - text: 3,353 Ratings
+                  - generic [ref=e1805]: "&302 Reviews"
+              - generic [ref=e1807]:
+                - generic [ref=e1808]: ₹30,999
+                - generic [ref=e1809]: 16% off
+            - list [ref=e1810]:
+              - listitem [ref=e1811]: Ultra HD (4K) | QLED
+              - listitem [ref=e1812]: "Model ID: 55GU1Q/55GU3Q"
+              - listitem [ref=e1813]: "Launch Year: 2024"
+        - generic [ref=e1814]:
+          - generic [ref=e1815]: Most Helpful Review
+          - generic [ref=e1817]:
+            - generic [ref=e1818]:
+              - generic [ref=e1819]:
+                - text: "5"
+                - img [ref=e1820]
+              - paragraph [ref=e1821]: Brilliant
+            - generic [ref=e1824]:
+              - generic [ref=e1825]:
+                - text: For the price .. This TV is awesome ..I don't know why anyone is complaining? .. for the price you won't get Google qled tv. ..
+                - text: The picture quality is very ...
+              - generic [ref=e1826] [cursor=pointer]: Read full review
+            - generic [ref=e1828]:
+              - paragraph [ref=e1829]: Avinash Avi
+              - img [ref=e1830]
+              - paragraph [ref=e1834]: Certified Buyer
+              - paragraph [ref=e1835]: Oct, 2024
+        - generic [ref=e1836]:
+          - generic [ref=e1837]: Recent Review
+          - generic [ref=e1839]:
+            - generic [ref=e1840]:
+              - generic [ref=e1841]:
+                - text: "5"
+                - img [ref=e1842]
+              - paragraph [ref=e1843]: Awesome
+            - generic [ref=e1847]:
+              - text: Wonderful TV.
+              - text: But installation of Flipkart is too bad.
+            - generic [ref=e1849]:
+              - paragraph [ref=e1850]: ARITRA KR Das
+              - img [ref=e1851]
+              - paragraph [ref=e1855]: Certified Buyer
+              - paragraph [ref=e1856]: 8 days ago
+      - generic [ref=e1857]:
+        - generic [ref=e1858]:
+          - generic [ref=e1860]:
+            - img "Foxsky 127 cm (50 inch) Ultra HD (4K) Mini LED Smart WebOS TV 2026 Edition with 2.1CH Audio System Tuned by 40W, Native 144 Refresh Rate, Dolby Vision Atmos"
+          - generic [ref=e1861]:
+            - link "5. Foxsky 127 cm (50 inch) Ult... 4.3 72 Ratings&33 Reviews ₹25,999 56% off" [ref=e1862] [cursor=pointer]:
+              - /url: /foxsky-127-cm-50-inch-ultra-hd-4k-mini-led-smart-webos-tv-2026-2-1ch-audio-system-tuned-40w-native-144-refresh-rate-dolby-vision-atmos/p/itm37fa28a524bd9?pid=TVSHJF6YUMDFFPHR&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1864]: 5. Foxsky 127 cm (50 inch) Ult...
+              - generic [ref=e1865]:
+                - generic [ref=e1866]:
+                  - text: "4.3"
+                  - img [ref=e1867]
+                - generic [ref=e1868]:
+                  - text: 72 Ratings
+                  - generic [ref=e1869]: "&33 Reviews"
+              - generic [ref=e1871]:
+                - generic [ref=e1872]: ₹25,999
+                - generic [ref=e1873]: 56% off
+            - list [ref=e1874]:
+              - listitem [ref=e1875]: Ultra HD (4K) | Mini LED
+              - listitem [ref=e1876]: "Model ID: FS50MINILED"
+              - listitem [ref=e1877]: "Launch Year: 2026"
+        - generic [ref=e1878]:
+          - generic [ref=e1879]: Most Helpful Review
+          - generic [ref=e1881]:
+            - generic [ref=e1882]:
+              - generic [ref=e1883]:
+                - text: "5"
+                - img [ref=e1884]
+              - paragraph [ref=e1885]: Brilliant
+            - generic [ref=e1888]:
+              - generic [ref=e1889]:
+                - text: I've been using the TV foxsky for a week and I'm genuinely impressed.
+                - text: This TV is total value for money deal
+                - text: This TV comes with all the function you'd find i...
+              - generic [ref=e1890] [cursor=pointer]: Read full review
+            - generic [ref=e1892]:
+              - paragraph [ref=e1893]: prabhu nath prasad
+              - img [ref=e1894]
+              - paragraph [ref=e1898]: Certified Buyer
+              - paragraph [ref=e1899]: 14 days ago
+        - generic [ref=e1900]:
+          - generic [ref=e1901]: Recent Review
+          - generic [ref=e1903]:
+            - generic [ref=e1904]:
+              - generic [ref=e1905]:
+                - text: "4"
+                - img [ref=e1906]
+              - paragraph [ref=e1907]: Pretty good
+            - generic [ref=e1911]: Sound could have been better clear and crisp
+            - generic [ref=e1913]:
+              - paragraph [ref=e1914]: Prince Et
+              - img [ref=e1915]
+              - paragraph [ref=e1919]: Certified Buyer
+              - paragraph [ref=e1920]: 1 day ago
+  - contentinfo [ref=e1921]:
+    - generic [ref=e1923]:
+      - generic [ref=e1924]:
+        - generic [ref=e1925]:
+          - generic [ref=e1926]: ABOUT
+          - link "Contact Us" [ref=e1927] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+          - link "About Us" [ref=e1928] [cursor=pointer]:
+            - /url: https://corporate.flipkart.net/corporate-home
+          - link "Careers" [ref=e1929] [cursor=pointer]:
+            - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+          - link "Flipkart Stories" [ref=e1930] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+          - link "Press" [ref=e1931] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/category/top-stories/news/
+          - link "Corporate Information" [ref=e1932] [cursor=pointer]:
+            - /url: /corporate-information
+        - generic [ref=e1933]:
+          - generic [ref=e1934]: GROUP COMPANIES
+          - link "Myntra" [ref=e1935] [cursor=pointer]:
+            - /url: https://www.myntra.com/
+          - link "Cleartrip" [ref=e1936] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Shopsy" [ref=e1937] [cursor=pointer]:
+            - /url: https://www.shopsy.in/
+        - generic [ref=e1938]:
+          - generic [ref=e1939]: HELP
+          - link "Payments" [ref=e1940] [cursor=pointer]:
+            - /url: /pages/payments
+          - link "Shipping" [ref=e1941] [cursor=pointer]:
+            - /url: /pages/shipping
+          - link "Cancellation & Returns" [ref=e1942] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+          - link "FAQ" [ref=e1943] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+        - generic [ref=e1944]:
+          - generic [ref=e1945]: CONSUMER POLICY
+          - link "Cancellation & Returns" [ref=e1946] [cursor=pointer]:
+            - /url: /pages/returnpolicy?otracker=footer_navlinks
+          - link "Terms Of Use" [ref=e1947] [cursor=pointer]:
+            - /url: /pages/terms?otracker=footer_navlinks
+          - link "Security" [ref=e1948] [cursor=pointer]:
+            - /url: /pages/paymentsecurity?otracker=footer_navlinks
+          - link "Privacy" [ref=e1949] [cursor=pointer]:
+            - /url: /pages/privacypolicy?otracker=footer_navlinks
+          - link "Sitemap" [ref=e1950] [cursor=pointer]:
+            - /url: /sitemap?otracker=footer_navlinks
+          - link "Grievance Redressal" [ref=e1951] [cursor=pointer]:
+            - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+          - link "EPR Compliance" [ref=e1952] [cursor=pointer]:
+            - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+          - link "FSSAI Food Safety Connect App" [ref=e1953] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=e1955]:
+          - generic [ref=e1956]: "Mail Us:"
+          - generic [ref=e1959]:
+            - paragraph [ref=e1960]: Flipkart Internet Private Limited,
+            - paragraph [ref=e1961]: Buildings Alyssa, Begonia &
+            - paragraph [ref=e1962]: Clove Embassy Tech Village,
+            - paragraph [ref=e1963]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=e1964]: Bengaluru, 560103,
+            - paragraph [ref=e1965]: Karnataka, India
+          - generic [ref=e1966]: Social
+          - generic [ref=e1967]:
+            - link [ref=e1969] [cursor=pointer]:
+              - /url: https://www.facebook.com/flipkart
+              - img [ref=e1970]
+            - link [ref=e1972] [cursor=pointer]:
+              - /url: https://www.twitter.com/flipkart
+              - img [ref=e1973]
+            - link [ref=e1975] [cursor=pointer]:
+              - /url: https://www.youtube.com/flipkart
+              - img [ref=e1976]
+            - link [ref=e1978] [cursor=pointer]:
+              - /url: https://www.instagram.com/flipkart
+              - img [ref=e1979]
+        - generic [ref=e1981]:
+          - generic [ref=e1982]: "Registered Office Address:"
+          - generic [ref=e1985]:
+            - paragraph [ref=e1986]: Flipkart Internet Private Limited,
+            - paragraph [ref=e1987]: Buildings Alyssa, Begonia &
+            - paragraph [ref=e1988]: Clove Embassy Tech Village,
+            - paragraph [ref=e1989]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=e1990]: Bengaluru, 560103,
+            - paragraph [ref=e1991]: Karnataka, India
+            - paragraph [ref=e1992]: "CIN : U51109KA2012PTC066107"
+            - paragraph [ref=e1993]:
+              - text: "Telephone:"
+              - link "044-45614700" [ref=e1994] [cursor=pointer]:
+                - /url: tel:044-45614700
+              - text: /
+              - link "044-67415800" [ref=e1995] [cursor=pointer]:
+                - /url: tel:044-67415800
+      - generic [ref=e1997]:
+        - generic [ref=e1998]:
+          - img [ref=e1999]
+          - link "Become a Seller" [ref=e2000] [cursor=pointer]:
+            - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+        - generic [ref=e2001]:
+          - img [ref=e2002]
+          - link "Advertise" [ref=e2003] [cursor=pointer]:
+            - /url: https://brands.flipkart.com
+        - generic [ref=e2004]:
+          - img [ref=e2005]
+          - link "Gift Cards" [ref=e2006] [cursor=pointer]:
+            - /url: /the-gift-card-store?otracker=footer_navlinks
+        - generic [ref=e2007]:
+          - img [ref=e2008]
+          - link "Help Center" [ref=e2009] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+        - generic [ref=e2010]: © 2007-2026 Flipkart.com
+        - img [ref=e2011]
+```
+
+# Test source
+
+```ts
+  202 |         // select option from the drop down (4 ways)
+  203 | 
+  204 |         // await page.locator('#colors').selectOption(['Red', 'Blue', 'Green']); // using visible text
+  205 |         // await page.locator('#colors').selectOption(['red', 'green', 'white']); // using value attribute
+  206 |         // await page.locator('#colors').selectOption([{ label: 'Red' },{ label: 'Green' },{ label: 'Yellow' }]); // using label
+  207 |         // await page.locator('#colors').selectOption([{ index: 0 },{ index: 2 },{ index: 4 }]); // using index
+  208 | 
+  209 |         await MulticountryDropdown.selectOption(['Red', 'Blue', 'Green']); // using visible text
+  210 |         await MulticountryDropdown.selectOption(['red', 'green', 'white']); // using value attribute
+  211 |         await MulticountryDropdown.selectOption([{ label: 'Red' }, { label: 'Green' }, { label: 'Yellow' }]); // using label
+  212 |         await MulticountryDropdown.selectOption([{ index: 0 }, { index: 2 }, { index: 4 }]); // using index
+  213 | 
+  214 | 
+  215 |         // check number of options in the dropdown (count)
+  216 | 
+  217 |         const dropdownOptions: Locator = page.locator("//select[@id='colors']/option");
+  218 |         await expect(dropdownOptions).toHaveCount(7);
+  219 | 
+  220 |         // check an option present in the dropdown
+  221 | 
+  222 |         const optionsText: string[] = (await dropdownOptions.allTextContents()).map(text => text.trim());
+  223 |         console.log('Dropdown options:', optionsText);
+  224 |         expect(optionsText).toContain('Green'); // Check if the array contains "Green"
+  225 | 
+  226 |         //Printing all options in dropdown 
+  227 |         for (const option of optionsText) {
+  228 |             console.log(option);
+  229 |         }
+  230 |     });
+  231 | 
+  232 |     test('Verify dropdown is sorted', async ({ page }) => {
+  233 | 
+  234 |         const dropDownOptions: Locator = page.locator('//select[@id="colors"]/option');
+  235 |         console.log(await dropDownOptions.allTextContents());
+  236 |         const optionsText1: string[] = (await dropDownOptions.allTextContents()).map(text => text.trim());
+  237 |         const originalList: string[] = optionsText1;
+  238 |         const sortedList: string[] = optionsText1.sort();
+  239 |         console.log("Original list:", originalList);
+  240 |         console.log("Sorted list: ", sortedList);
+  241 |         await page.waitForTimeout(5000);
+  242 | 
+  243 | 
+  244 |         const dropDownOptions1: Locator = page.locator('//select[@id="animals"]/option');
+  245 |         console.log(await dropDownOptions1.allTextContents());
+  246 |         const optionsText2: string[] = (await dropDownOptions1.allTextContents()).map(text => text.trim());
+  247 |         const originalList2: string[] = optionsText2;
+  248 |         const sortedList2: string[] = optionsText2.sort();
+  249 |         console.log("Original list:", originalList2);
+  250 |         console.log("Sorted list: ", sortedList2);
+  251 |         await page.waitForTimeout(5000);
+  252 | 
+  253 |     });
+  254 | 
+  255 |     test("Verify dropdown contains duplicates", async ({ page }) => {
+  256 | 
+  257 |         //const dropDownOptions: Locator = page.locator('//select[@id="colors"]/option');     // having duplicates
+  258 |         const dropDownOptions: Locator = page.locator('//select[@id="animals"]/option');   // not having duplicates
+  259 |         const optionsText: string[] = (await dropDownOptions.allTextContents()).map(text => text.trim());
+  260 |         const myset = new Set<string>(); // Set-duplicates not allowed
+  261 |         const duplicates: string[] = []; // array duplicates allowed
+  262 | 
+  263 |         for (const text of optionsText) {
+  264 |             if (myset.has(text)) {
+  265 | 
+  266 |                 duplicates.push(text);
+  267 |             }
+  268 |             else {
+  269 |                 myset.add(text);
+  270 |             }
+  271 |         }
+  272 |         //console.log("Duplicate options are:===>", duplicates);
+  273 | 
+  274 |         if (duplicates.length > 0) {
+  275 |             console.log("Duplicate options found.", duplicates)
+  276 |         }
+  277 |         else {
+  278 |             console.log("No duplicate options found..")
+  279 |         }
+  280 |         //expect(duplicates.length).toBe(0);
+  281 |     });
+  282 | 
+  283 |     //await page.waitForTimeout(5000);
+  284 | 
+  285 |     //========================================================= Session-8 =========================================================
+  286 | 
+  287 |     test.only('AutoSuggest dropdown', async ({ page }) => {
+  288 | 
+  289 |     await page.goto('https://www.flipkart.com/');
+  290 |     await page.locator('//span[@role="button"]').click();
+  291 |     const searchBar: Locator = page.locator('//form[@class="lilxh_ header-form-search"]//input[@placeholder="Search for Products, Brands and More"]');
+  292 |     await searchBar.fill('smart');
+  293 |     await page.waitForLoadState('domcontentloaded');
+  294 |     await page.keyboard.press('Enter');
+  295 |     const searchbar2 : Locator = await page.locator('//input[@title="Search for products, brands and more"]');
+  296 |     await searchbar2.clear();
+  297 |     await searchbar2.fill('smart');
+  298 |    
+  299 |     // Get all suggest options
+  300 |     const options: Locator = page.locator('//ul[@class="col-12-12 I01Bvi O1jfZ8"]/li');
+  301 |     await page.waitForLoadState('domcontentloaded');
+> 302 |     await expect(options).toBeVisible(); 
+      |                           ^ Error: expect(locator).toBeVisible() failed
+  303 |     const optionsCount: number = await options.count();
+  304 |     console.log('Number of suggest options:', optionsCount);
+  305 | 
+  306 |     // Print all the suggest options
+  307 |     for (let i = 0; i < optionsCount; i++) {
+  308 |         const optionText: string | null = await options.nth(i).textContent();
+  309 |         console.log(`Option ${i + 1}: ${optionText?.trim()}`);
+  310 |     }
+  311 | 
+  312 |     await page.waitForTimeout(5000);
+  313 | });
+  314 | 
+  315 | });
+  316 | 
+  317 | 
+```

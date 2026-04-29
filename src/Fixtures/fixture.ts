@@ -1,7 +1,7 @@
 import { test as base, expect } from "@playwright/test";
 import registrationData from "../../src/Json_data/registration.json";
 import { RegistrationAction } from "../../src/Actions/registrationAction";
-import { ProductPage } from "../../src/Pages/productPage";
+import { ProductPage } from "../Pages/4_productPage";
 
 type AppActions = {
     registration: RegistrationAction;

@@ -1,0 +1,9 @@
+Number of suggest options: 8
+Option 1: smart watchesin Smart Watches
+Option 2: smart watch boat
+Option 3: smart tv
+Option 4: smartphone
+Option 5: smart phones
+Option 6: smart watches waterproof
+Option 7: smart watches noise
+Option 8: smart ring boat

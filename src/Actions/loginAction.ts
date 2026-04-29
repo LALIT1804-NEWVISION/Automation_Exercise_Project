@@ -1,4 +1,4 @@
-import { LoginPage } from '../../src/Pages/loginPage';
+import { LoginPage } from '../Pages/2_loginPage';
 import { expect } from '@playwright/test';
 
 export class LoginAction {

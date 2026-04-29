@@ -1,0 +1,1412 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Practise.spec.ts >> Bootsrtap hidden dropdown
+- Location: tests\Practise.spec.ts:327:6
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.innerText: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('div[role="listbox"] span').nth(1)
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - complementary [ref=e4]:
+      - navigation "Sidepanel" [ref=e5]:
+        - generic [ref=e6]:
+          - link "client brand banner" [ref=e7] [cursor=pointer]:
+            - /url: https://www.orangehrm.com/
+            - img "client brand banner" [ref=e9]
+          - text: 
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - textbox "Search" [ref=e15]
+              - button "" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17]: 
+            - separator [ref=e18]
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "Admin" [ref=e21] [cursor=pointer]:
+                - /url: /web/index.php/admin/viewAdminModule
+                - generic [ref=e24]: Admin
+            - listitem [ref=e25]:
+              - link "PIM" [ref=e26] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewPimModule
+                - generic [ref=e40]: PIM
+            - listitem [ref=e41]:
+              - link "Leave" [ref=e42] [cursor=pointer]:
+                - /url: /web/index.php/leave/viewLeaveModule
+                - generic [ref=e45]: Leave
+            - listitem [ref=e46]:
+              - link "Time" [ref=e47] [cursor=pointer]:
+                - /url: /web/index.php/time/viewTimeModule
+                - generic [ref=e53]: Time
+            - listitem [ref=e54]:
+              - link "Recruitment" [ref=e55] [cursor=pointer]:
+                - /url: /web/index.php/recruitment/viewRecruitmentModule
+                - generic [ref=e61]: Recruitment
+            - listitem [ref=e62]:
+              - link "My Info" [ref=e63] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewMyDetails
+                - generic [ref=e69]: My Info
+            - listitem [ref=e70]:
+              - link "Performance" [ref=e71] [cursor=pointer]:
+                - /url: /web/index.php/performance/viewPerformanceModule
+                - generic [ref=e79]: Performance
+            - listitem [ref=e80]:
+              - link "Dashboard" [ref=e81] [cursor=pointer]:
+                - /url: /web/index.php/dashboard/index
+                - generic [ref=e84]: Dashboard
+            - listitem [ref=e85]:
+              - link "Directory" [ref=e86] [cursor=pointer]:
+                - /url: /web/index.php/directory/viewDirectory
+                - generic [ref=e89]: Directory
+            - listitem [ref=e90]:
+              - link "Maintenance" [ref=e91] [cursor=pointer]:
+                - /url: /web/index.php/maintenance/viewMaintenanceModule
+                - generic [ref=e95]: Maintenance
+            - listitem [ref=e96]:
+              - link "Claim" [ref=e97] [cursor=pointer]:
+                - /url: /web/index.php/claim/viewClaimModule
+                - img [ref=e100]
+                - generic [ref=e104]: Claim
+            - listitem [ref=e105]:
+              - link "Buzz" [ref=e106] [cursor=pointer]:
+                - /url: /web/index.php/buzz/viewBuzz
+                - generic [ref=e109]: Buzz
+    - banner [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: 
+          - heading "PIM" [level=6] [ref=e114]
+        - link "Upgrade" [ref=e116]:
+          - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+          - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125] [cursor=pointer]:
+              - img "profile picture" [ref=e126]
+              - paragraph [ref=e127]: haileyTestar userTesting
+              - generic [ref=e128]: 
+      - navigation "Topbar Menu" [ref=e130]:
+        - list [ref=e131]:
+          - listitem [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]:
+              - text: Configuration
+              - generic [ref=e134]: 
+          - listitem [ref=e135] [cursor=pointer]:
+            - link "Employee List" [ref=e136]:
+              - /url: "#"
+          - listitem [ref=e137] [cursor=pointer]:
+            - link "Add Employee" [ref=e138]:
+              - /url: "#"
+          - listitem [ref=e139] [cursor=pointer]:
+            - link "Reports" [ref=e140]:
+              - /url: "#"
+          - button "" [ref=e142] [cursor=pointer]:
+            - generic [ref=e143]: 
+  - generic [ref=e144]:
+    - generic [ref=e146]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - heading "Employee Information" [level=5] [ref=e150]
+          - button "" [ref=e153] [cursor=pointer]:
+            - generic [ref=e154]: 
+        - separator [ref=e155]
+        - generic [ref=e157]:
+          - generic [ref=e159]:
+            - generic [ref=e161]:
+              - generic [ref=e163]: Employee Name
+              - textbox "Type for hints..." [ref=e167]
+            - generic [ref=e169]:
+              - generic [ref=e171]: Employee Id
+              - textbox [ref=e173]
+            - generic [ref=e175]:
+              - generic [ref=e177]: Employment Status
+              - generic [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]: "-- Select --"
+                - generic [ref=e183]: 
+            - generic [ref=e185]:
+              - generic [ref=e187]: Include
+              - generic [ref=e190] [cursor=pointer]:
+                - generic [ref=e191]: Current Employees Only
+                - generic [ref=e193]: 
+            - generic [ref=e195]:
+              - generic [ref=e197]: Supervisor Name
+              - textbox "Type for hints..." [ref=e201]
+            - generic [ref=e203]:
+              - generic [ref=e205]: Job Title
+              - generic [ref=e208] [cursor=pointer]:
+                - generic [ref=e209]: Automation Tester
+                - generic [ref=e211]: 
+            - generic [ref=e213]:
+              - generic [ref=e215]: Sub Unit
+              - generic [ref=e218] [cursor=pointer]:
+                - generic [ref=e219]: "-- Select --"
+                - generic [ref=e221]: 
+          - separator [ref=e222]
+          - generic [ref=e223]:
+            - button "Reset" [ref=e224] [cursor=pointer]
+            - button "Search" [ref=e225] [cursor=pointer]
+      - generic [ref=e226]:
+        - button " Add" [ref=e228] [cursor=pointer]:
+          - generic [ref=e229]: 
+          - text: Add
+        - generic [ref=e230]:
+          - separator [ref=e231]
+          - generic [ref=e233]: (216) Records Found
+        - table [ref=e235]:
+          - rowgroup [ref=e236]:
+            - row " Id  First (& Middle) Name  Last Name  Job Title  Employment Status  Sub Unit  Supervisor  Actions" [ref=e237]:
+              - columnheader "" [ref=e238]:
+                - generic [ref=e240] [cursor=pointer]:
+                  - checkbox "" [ref=e241]
+                  - generic [ref=e243]: 
+              - columnheader "Id " [ref=e244]:
+                - text: Id
+                - generic [ref=e245]:
+                  - generic [ref=e246] [cursor=pointer]: 
+                  - text:  
+              - columnheader "First (& Middle) Name " [ref=e247]:
+                - text: First (& Middle) Name
+                - generic [ref=e248]:
+                  - generic [ref=e249] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Last Name " [ref=e250]:
+                - text: Last Name
+                - generic [ref=e251]:
+                  - generic [ref=e252] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Job Title " [ref=e253]:
+                - text: Job Title
+                - generic [ref=e254]:
+                  - generic [ref=e255] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Employment Status " [ref=e256]:
+                - text: Employment Status
+                - generic [ref=e257]:
+                  - generic [ref=e258] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Sub Unit " [ref=e259]:
+                - text: Sub Unit
+                - generic [ref=e260]:
+                  - generic [ref=e261] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Supervisor " [ref=e262]:
+                - text: Supervisor
+                - generic [ref=e263]:
+                  - generic [ref=e264] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Actions" [ref=e265]
+          - rowgroup [ref=e266]:
+            - row " 0415 aaa bbb ccc Automation Tester 2.0  " [ref=e268] [cursor=pointer]:
+              - cell "" [ref=e269]:
+                - generic [ref=e272]:
+                  - checkbox "" [ref=e273]
+                  - generic [ref=e275]: 
+              - cell "0415" [ref=e276]:
+                - generic [ref=e277]: "0415"
+              - cell "aaa bbb" [ref=e278]:
+                - generic [ref=e279]: aaa bbb
+              - cell "ccc" [ref=e280]:
+                - generic [ref=e281]: ccc
+              - cell "Automation Tester 2.0" [ref=e282]:
+                - generic [ref=e283]: Automation Tester 2.0
+              - cell [ref=e284]
+              - cell [ref=e285]
+              - cell [ref=e286]
+              - cell " " [ref=e287]:
+                - generic [ref=e288]:
+                  - button "" [ref=e289]:
+                    - generic [ref=e290]: 
+                  - button "" [ref=e291]:
+                    - generic [ref=e292]: 
+            - row " 2026008 Ai Khopipah Salmi Administration  " [ref=e294] [cursor=pointer]:
+              - cell "" [ref=e295]:
+                - generic [ref=e298]:
+                  - checkbox "" [ref=e299]
+                  - generic [ref=e301]: 
+              - cell "2026008" [ref=e302]:
+                - generic [ref=e303]: "2026008"
+              - cell "Ai Khopipah" [ref=e304]:
+                - generic [ref=e305]: Ai Khopipah
+              - cell "Salmi" [ref=e306]:
+                - generic [ref=e307]: Salmi
+              - cell [ref=e308]
+              - cell [ref=e309]
+              - cell "Administration" [ref=e310]:
+                - generic [ref=e311]: Administration
+              - cell [ref=e312]
+              - cell " " [ref=e313]:
+                - generic [ref=e314]:
+                  - button "" [ref=e315]:
+                    - generic [ref=e316]: 
+                  - button "" [ref=e317]:
+                    - generic [ref=e318]: 
+            - row " 2026003 Aliffa Zayratul Aulia Engineering  " [ref=e320] [cursor=pointer]:
+              - cell "" [ref=e321]:
+                - generic [ref=e324]:
+                  - checkbox "" [ref=e325]
+                  - generic [ref=e327]: 
+              - cell "2026003" [ref=e328]:
+                - generic [ref=e329]: "2026003"
+              - cell "Aliffa Zayratul" [ref=e330]:
+                - generic [ref=e331]: Aliffa Zayratul
+              - cell "Aulia" [ref=e332]:
+                - generic [ref=e333]: Aulia
+              - cell [ref=e334]
+              - cell [ref=e335]
+              - cell "Engineering" [ref=e336]:
+                - generic [ref=e337]: Engineering
+              - cell [ref=e338]
+              - cell " " [ref=e339]:
+                - generic [ref=e340]:
+                  - button "" [ref=e341]:
+                    - generic [ref=e342]: 
+                  - button "" [ref=e343]:
+                    - generic [ref=e344]: 
+            - row " 9013 Aluna Kirana  " [ref=e346] [cursor=pointer]:
+              - cell "" [ref=e347]:
+                - generic [ref=e350]:
+                  - checkbox "" [ref=e351]
+                  - generic [ref=e353]: 
+              - cell "9013" [ref=e354]:
+                - generic [ref=e355]: "9013"
+              - cell "Aluna" [ref=e356]:
+                - generic [ref=e357]: Aluna
+              - cell "Kirana" [ref=e358]:
+                - generic [ref=e359]: Kirana
+              - cell [ref=e360]
+              - cell [ref=e361]
+              - cell [ref=e362]
+              - cell [ref=e363]
+              - cell " " [ref=e364]:
+                - generic [ref=e365]:
+                  - button "" [ref=e366]:
+                    - generic [ref=e367]: 
+                  - button "" [ref=e368]:
+                    - generic [ref=e369]: 
+            - row " 0399 Amelia Siti Fatimah  " [ref=e371] [cursor=pointer]:
+              - cell "" [ref=e372]:
+                - generic [ref=e375]:
+                  - checkbox "" [ref=e376]
+                  - generic [ref=e378]: 
+              - cell "0399" [ref=e379]:
+                - generic [ref=e380]: "0399"
+              - cell "Amelia Siti" [ref=e381]:
+                - generic [ref=e382]: Amelia Siti
+              - cell "Fatimah" [ref=e383]:
+                - generic [ref=e384]: Fatimah
+              - cell [ref=e385]
+              - cell [ref=e386]
+              - cell [ref=e387]
+              - cell [ref=e388]
+              - cell " " [ref=e389]:
+                - generic [ref=e390]:
+                  - button "" [ref=e391]:
+                    - generic [ref=e392]: 
+                  - button "" [ref=e393]:
+                    - generic [ref=e394]: 
+            - row " 01715 Amelia Brown  " [ref=e396] [cursor=pointer]:
+              - cell "" [ref=e397]:
+                - generic [ref=e400]:
+                  - checkbox "" [ref=e401]
+                  - generic [ref=e403]: 
+              - cell "01715" [ref=e404]:
+                - generic [ref=e405]: "01715"
+              - cell "Amelia" [ref=e406]:
+                - generic [ref=e407]: Amelia
+              - cell "Brown" [ref=e408]:
+                - generic [ref=e409]: Brown
+              - cell [ref=e410]
+              - cell [ref=e411]
+              - cell [ref=e412]
+              - cell [ref=e413]
+              - cell " " [ref=e414]:
+                - generic [ref=e415]:
+                  - button "" [ref=e416]:
+                    - generic [ref=e417]: 
+                  - button "" [ref=e418]:
+                    - generic [ref=e419]: 
+            - row " 0360 aniket t t  " [ref=e421] [cursor=pointer]:
+              - cell "" [ref=e422]:
+                - generic [ref=e425]:
+                  - checkbox "" [ref=e426]
+                  - generic [ref=e428]: 
+              - cell "0360" [ref=e429]:
+                - generic [ref=e430]: "0360"
+              - cell "aniket t" [ref=e431]:
+                - generic [ref=e432]: aniket t
+              - cell "t" [ref=e433]:
+                - generic [ref=e434]: t
+              - cell [ref=e435]
+              - cell [ref=e436]
+              - cell [ref=e437]
+              - cell [ref=e438]
+              - cell " " [ref=e439]:
+                - generic [ref=e440]:
+                  - button "" [ref=e441]:
+                    - generic [ref=e442]: 
+                  - button "" [ref=e443]:
+                    - generic [ref=e444]: 
+            - row " 918 aniket Ashok patil  " [ref=e446] [cursor=pointer]:
+              - cell "" [ref=e447]:
+                - generic [ref=e450]:
+                  - checkbox "" [ref=e451]
+                  - generic [ref=e453]: 
+              - cell "918" [ref=e454]:
+                - generic [ref=e455]: "918"
+              - cell "aniket Ashok" [ref=e456]:
+                - generic [ref=e457]: aniket Ashok
+              - cell "patil" [ref=e458]:
+                - generic [ref=e459]: patil
+              - cell [ref=e460]
+              - cell [ref=e461]
+              - cell [ref=e462]
+              - cell [ref=e463]
+              - cell " " [ref=e464]:
+                - generic [ref=e465]:
+                  - button "" [ref=e466]:
+                    - generic [ref=e467]: 
+                  - button "" [ref=e468]:
+                    - generic [ref=e469]: 
+            - row " 082 Antonio Baskara  " [ref=e471] [cursor=pointer]:
+              - cell "" [ref=e472]:
+                - generic [ref=e475]:
+                  - checkbox "" [ref=e476]
+                  - generic [ref=e478]: 
+              - cell "082" [ref=e479]:
+                - generic [ref=e480]: "082"
+              - cell "Antonio" [ref=e481]:
+                - generic [ref=e482]: Antonio
+              - cell "Baskara" [ref=e483]:
+                - generic [ref=e484]: Baskara
+              - cell [ref=e485]
+              - cell [ref=e486]
+              - cell [ref=e487]
+              - cell [ref=e488]
+              - cell " " [ref=e489]:
+                - generic [ref=e490]:
+                  - button "" [ref=e491]:
+                    - generic [ref=e492]: 
+                  - button "" [ref=e493]:
+                    - generic [ref=e494]: 
+            - row " 0393 Arum Mayang Sari  " [ref=e496] [cursor=pointer]:
+              - cell "" [ref=e497]:
+                - generic [ref=e500]:
+                  - checkbox "" [ref=e501]
+                  - generic [ref=e503]: 
+              - cell "0393" [ref=e504]:
+                - generic [ref=e505]: "0393"
+              - cell "Arum Mayang" [ref=e506]:
+                - generic [ref=e507]: Arum Mayang
+              - cell "Sari" [ref=e508]:
+                - generic [ref=e509]: Sari
+              - cell [ref=e510]
+              - cell [ref=e511]
+              - cell [ref=e512]
+              - cell [ref=e513]
+              - cell " " [ref=e514]:
+                - generic [ref=e515]:
+                  - button "" [ref=e516]:
+                    - generic [ref=e517]: 
+                  - button "" [ref=e518]:
+                    - generic [ref=e519]: 
+            - row " 0367 Ash J Tyson  " [ref=e521] [cursor=pointer]:
+              - cell "" [ref=e522]:
+                - generic [ref=e525]:
+                  - checkbox "" [ref=e526]
+                  - generic [ref=e528]: 
+              - cell "0367" [ref=e529]:
+                - generic [ref=e530]: "0367"
+              - cell "Ash J" [ref=e531]:
+                - generic [ref=e532]: Ash J
+              - cell "Tyson" [ref=e533]:
+                - generic [ref=e534]: Tyson
+              - cell [ref=e535]
+              - cell [ref=e536]
+              - cell [ref=e537]
+              - cell [ref=e538]
+              - cell " " [ref=e539]:
+                - generic [ref=e540]:
+                  - button "" [ref=e541]:
+                    - generic [ref=e542]: 
+                  - button "" [ref=e543]:
+                    - generic [ref=e544]: 
+            - row " 1798 Aureliana Safira  " [ref=e546] [cursor=pointer]:
+              - cell "" [ref=e547]:
+                - generic [ref=e550]:
+                  - checkbox "" [ref=e551]
+                  - generic [ref=e553]: 
+              - cell "1798" [ref=e554]:
+                - generic [ref=e555]: "1798"
+              - cell "Aureliana" [ref=e556]:
+                - generic [ref=e557]: Aureliana
+              - cell "Safira" [ref=e558]:
+                - generic [ref=e559]: Safira
+              - cell [ref=e560]
+              - cell [ref=e561]
+              - cell [ref=e562]
+              - cell [ref=e563]
+              - cell " " [ref=e564]:
+                - generic [ref=e565]:
+                  - button "" [ref=e566]:
+                    - generic [ref=e567]: 
+                  - button "" [ref=e568]:
+                    - generic [ref=e569]: 
+            - row " 0303 bala kumar ravi  " [ref=e571] [cursor=pointer]:
+              - cell "" [ref=e572]:
+                - generic [ref=e575]:
+                  - checkbox "" [ref=e576]
+                  - generic [ref=e578]: 
+              - cell "0303" [ref=e579]:
+                - generic [ref=e580]: "0303"
+              - cell "bala kumar" [ref=e581]:
+                - generic [ref=e582]: bala kumar
+              - cell "ravi" [ref=e583]:
+                - generic [ref=e584]: ravi
+              - cell [ref=e585]
+              - cell [ref=e586]
+              - cell [ref=e587]
+              - cell [ref=e588]
+              - cell " " [ref=e589]:
+                - generic [ref=e590]:
+                  - button "" [ref=e591]:
+                    - generic [ref=e592]: 
+                  - button "" [ref=e593]:
+                    - generic [ref=e594]: 
+            - row " 0292 bmrtahvwhibmrtahvwhi hbfqkhjfqbhbfqkhjfqb  " [ref=e596] [cursor=pointer]:
+              - cell "" [ref=e597]:
+                - generic [ref=e600]:
+                  - checkbox "" [ref=e601]
+                  - generic [ref=e603]: 
+              - cell "0292" [ref=e604]:
+                - generic [ref=e605]: "0292"
+              - cell "bmrtahvwhibmrtahvwhi" [ref=e606]:
+                - generic [ref=e607]: bmrtahvwhibmrtahvwhi
+              - cell "hbfqkhjfqbhbfqkhjfqb" [ref=e608]:
+                - generic [ref=e609]: hbfqkhjfqbhbfqkhjfqb
+              - cell [ref=e610]
+              - cell [ref=e611]
+              - cell [ref=e612]
+              - cell [ref=e613]
+              - cell " " [ref=e614]:
+                - generic [ref=e615]:
+                  - button "" [ref=e616]:
+                    - generic [ref=e617]: 
+                  - button "" [ref=e618]:
+                    - generic [ref=e619]: 
+            - row " 0320 Charles Carter  " [ref=e621] [cursor=pointer]:
+              - cell "" [ref=e622]:
+                - generic [ref=e625]:
+                  - checkbox "" [ref=e626]
+                  - generic [ref=e628]: 
+              - cell "0320" [ref=e629]:
+                - generic [ref=e630]: "0320"
+              - cell "Charles" [ref=e631]:
+                - generic [ref=e632]: Charles
+              - cell "Carter" [ref=e633]:
+                - generic [ref=e634]: Carter
+              - cell [ref=e635]
+              - cell [ref=e636]
+              - cell [ref=e637]
+              - cell [ref=e638]
+              - cell " " [ref=e639]:
+                - generic [ref=e640]:
+                  - button "" [ref=e641]:
+                    - generic [ref=e642]: 
+                  - button "" [ref=e643]:
+                    - generic [ref=e644]: 
+            - row " 1053-5 Charles Marie Jackson  " [ref=e646] [cursor=pointer]:
+              - cell "" [ref=e647]:
+                - generic [ref=e650]:
+                  - checkbox "" [ref=e651]
+                  - generic [ref=e653]: 
+              - cell "1053-5" [ref=e654]:
+                - generic [ref=e655]: 1053-5
+              - cell "Charles Marie" [ref=e656]:
+                - generic [ref=e657]: Charles Marie
+              - cell "Jackson" [ref=e658]:
+                - generic [ref=e659]: Jackson
+              - cell [ref=e660]
+              - cell [ref=e661]
+              - cell [ref=e662]
+              - cell [ref=e663]
+              - cell " " [ref=e664]:
+                - generic [ref=e665]:
+                  - button "" [ref=e666]:
+                    - generic [ref=e667]: 
+                  - button "" [ref=e668]:
+                    - generic [ref=e669]: 
+            - row " 00392 Charlotte Smith  " [ref=e671] [cursor=pointer]:
+              - cell "" [ref=e672]:
+                - generic [ref=e675]:
+                  - checkbox "" [ref=e676]
+                  - generic [ref=e678]: 
+              - cell "00392" [ref=e679]:
+                - generic [ref=e680]: "00392"
+              - cell "Charlotte" [ref=e681]:
+                - generic [ref=e682]: Charlotte
+              - cell "Smith" [ref=e683]:
+                - generic [ref=e684]: Smith
+              - cell [ref=e685]
+              - cell [ref=e686]
+              - cell [ref=e687]
+              - cell [ref=e688]
+              - cell " " [ref=e689]:
+                - generic [ref=e690]:
+                  - button "" [ref=e691]:
+                    - generic [ref=e692]: 
+                  - button "" [ref=e693]:
+                    - generic [ref=e694]: 
+            - row " 1030-5 Christopher Allen Lee  " [ref=e696] [cursor=pointer]:
+              - cell "" [ref=e697]:
+                - generic [ref=e700]:
+                  - checkbox "" [ref=e701]
+                  - generic [ref=e703]: 
+              - cell "1030-5" [ref=e704]:
+                - generic [ref=e705]: 1030-5
+              - cell "Christopher Allen" [ref=e706]:
+                - generic [ref=e707]: Christopher Allen
+              - cell "Lee" [ref=e708]:
+                - generic [ref=e709]: Lee
+              - cell [ref=e710]
+              - cell [ref=e711]
+              - cell [ref=e712]
+              - cell [ref=e713]
+              - cell " " [ref=e714]:
+                - generic [ref=e715]:
+                  - button "" [ref=e716]:
+                    - generic [ref=e717]: 
+                  - button "" [ref=e718]:
+                    - generic [ref=e719]: 
+            - row " 0363 Christopher Mcmillan  " [ref=e721] [cursor=pointer]:
+              - cell "" [ref=e722]:
+                - generic [ref=e725]:
+                  - checkbox "" [ref=e726]
+                  - generic [ref=e728]: 
+              - cell "0363" [ref=e729]:
+                - generic [ref=e730]: "0363"
+              - cell "Christopher" [ref=e731]:
+                - generic [ref=e732]: Christopher
+              - cell "Mcmillan" [ref=e733]:
+                - generic [ref=e734]: Mcmillan
+              - cell [ref=e735]
+              - cell [ref=e736]
+              - cell [ref=e737]
+              - cell [ref=e738]
+              - cell " " [ref=e739]:
+                - generic [ref=e740]:
+                  - button "" [ref=e741]:
+                    - generic [ref=e742]: 
+                  - button "" [ref=e743]:
+                    - generic [ref=e744]: 
+            - row " 1032-7 Daniel Lee Thompson  " [ref=e746] [cursor=pointer]:
+              - cell "" [ref=e747]:
+                - generic [ref=e750]:
+                  - checkbox "" [ref=e751]
+                  - generic [ref=e753]: 
+              - cell "1032-7" [ref=e754]:
+                - generic [ref=e755]: 1032-7
+              - cell "Daniel Lee" [ref=e756]:
+                - generic [ref=e757]: Daniel Lee
+              - cell "Thompson" [ref=e758]:
+                - generic [ref=e759]: Thompson
+              - cell [ref=e760]
+              - cell [ref=e761]
+              - cell [ref=e762]
+              - cell [ref=e763]
+              - cell " " [ref=e764]:
+                - generic [ref=e765]:
+                  - button "" [ref=e766]:
+                    - generic [ref=e767]: 
+                  - button "" [ref=e768]:
+                    - generic [ref=e769]: 
+            - row " 1057-7 Daniel Rose Thompson  " [ref=e771] [cursor=pointer]:
+              - cell "" [ref=e772]:
+                - generic [ref=e775]:
+                  - checkbox "" [ref=e776]
+                  - generic [ref=e778]: 
+              - cell "1057-7" [ref=e779]:
+                - generic [ref=e780]: 1057-7
+              - cell "Daniel Rose" [ref=e781]:
+                - generic [ref=e782]: Daniel Rose
+              - cell "Thompson" [ref=e783]:
+                - generic [ref=e784]: Thompson
+              - cell [ref=e785]
+              - cell [ref=e786]
+              - cell [ref=e787]
+              - cell [ref=e788]
+              - cell " " [ref=e789]:
+                - generic [ref=e790]:
+                  - button "" [ref=e791]:
+                    - generic [ref=e792]: 
+                  - button "" [ref=e793]:
+                    - generic [ref=e794]: 
+            - row " 1045-17 David Hope Hernandez  " [ref=e796] [cursor=pointer]:
+              - cell "" [ref=e797]:
+                - generic [ref=e800]:
+                  - checkbox "" [ref=e801]
+                  - generic [ref=e803]: 
+              - cell "1045-17" [ref=e804]:
+                - generic [ref=e805]: 1045-17
+              - cell "David Hope" [ref=e806]:
+                - generic [ref=e807]: David Hope
+              - cell "Hernandez" [ref=e808]:
+                - generic [ref=e809]: Hernandez
+              - cell [ref=e810]
+              - cell [ref=e811]
+              - cell [ref=e812]
+              - cell [ref=e813]
+              - cell " " [ref=e814]:
+                - generic [ref=e815]:
+                  - button "" [ref=e816]:
+                    - generic [ref=e817]: 
+                  - button "" [ref=e818]:
+                    - generic [ref=e819]: 
+            - row " 098286 David B Miller  " [ref=e821] [cursor=pointer]:
+              - cell "" [ref=e822]:
+                - generic [ref=e825]:
+                  - checkbox "" [ref=e826]
+                  - generic [ref=e828]: 
+              - cell "098286" [ref=e829]:
+                - generic [ref=e830]: "098286"
+              - cell "David B" [ref=e831]:
+                - generic [ref=e832]: David B
+              - cell "Miller" [ref=e833]:
+                - generic [ref=e834]: Miller
+              - cell [ref=e835]
+              - cell [ref=e836]
+              - cell [ref=e837]
+              - cell [ref=e838]
+              - cell " " [ref=e839]:
+                - generic [ref=e840]:
+                  - button "" [ref=e841]:
+                    - generic [ref=e842]: 
+                  - button "" [ref=e843]:
+                    - generic [ref=e844]: 
+            - row " 719160 David B Miller  " [ref=e846] [cursor=pointer]:
+              - cell "" [ref=e847]:
+                - generic [ref=e850]:
+                  - checkbox "" [ref=e851]
+                  - generic [ref=e853]: 
+              - cell "719160" [ref=e854]:
+                - generic [ref=e855]: "719160"
+              - cell "David B" [ref=e856]:
+                - generic [ref=e857]: David B
+              - cell "Miller" [ref=e858]:
+                - generic [ref=e859]: Miller
+              - cell [ref=e860]
+              - cell [ref=e861]
+              - cell [ref=e862]
+              - cell [ref=e863]
+              - cell " " [ref=e864]:
+                - generic [ref=e865]:
+                  - button "" [ref=e866]:
+                    - generic [ref=e867]: 
+                  - button "" [ref=e868]:
+                    - generic [ref=e869]: 
+            - row " 864400 David B Miller  " [ref=e871] [cursor=pointer]:
+              - cell "" [ref=e872]:
+                - generic [ref=e875]:
+                  - checkbox "" [ref=e876]
+                  - generic [ref=e878]: 
+              - cell "864400" [ref=e879]:
+                - generic [ref=e880]: "864400"
+              - cell "David B" [ref=e881]:
+                - generic [ref=e882]: David B
+              - cell "Miller" [ref=e883]:
+                - generic [ref=e884]: Miller
+              - cell [ref=e885]
+              - cell [ref=e886]
+              - cell [ref=e887]
+              - cell [ref=e888]
+              - cell " " [ref=e889]:
+                - generic [ref=e890]:
+                  - button "" [ref=e891]:
+                    - generic [ref=e892]: 
+                  - button "" [ref=e893]:
+                    - generic [ref=e894]: 
+            - row " 242180 David B Miller  " [ref=e896] [cursor=pointer]:
+              - cell "" [ref=e897]:
+                - generic [ref=e900]:
+                  - checkbox "" [ref=e901]
+                  - generic [ref=e903]: 
+              - cell "242180" [ref=e904]:
+                - generic [ref=e905]: "242180"
+              - cell "David B" [ref=e906]:
+                - generic [ref=e907]: David B
+              - cell "Miller" [ref=e908]:
+                - generic [ref=e909]: Miller
+              - cell [ref=e910]
+              - cell [ref=e911]
+              - cell [ref=e912]
+              - cell [ref=e913]
+              - cell " " [ref=e914]:
+                - generic [ref=e915]:
+                  - button "" [ref=e916]:
+                    - generic [ref=e917]: 
+                  - button "" [ref=e918]:
+                    - generic [ref=e919]: 
+            - row " 00002 Dede Nurul  " [ref=e921] [cursor=pointer]:
+              - cell "" [ref=e922]:
+                - generic [ref=e925]:
+                  - checkbox "" [ref=e926]
+                  - generic [ref=e928]: 
+              - cell "00002" [ref=e929]:
+                - generic [ref=e930]: "00002"
+              - cell "Dede" [ref=e931]:
+                - generic [ref=e932]: Dede
+              - cell "Nurul" [ref=e933]:
+                - generic [ref=e934]: Nurul
+              - cell [ref=e935]
+              - cell [ref=e936]
+              - cell [ref=e937]
+              - cell [ref=e938]
+              - cell " " [ref=e939]:
+                - generic [ref=e940]:
+                  - button "" [ref=e941]:
+                    - generic [ref=e942]: 
+                  - button "" [ref=e943]:
+                    - generic [ref=e944]: 
+            - row " 0290 dhbrukkuzldhbrukkuzl ibuvlwtfsfibuvlwtfsf  " [ref=e946] [cursor=pointer]:
+              - cell "" [ref=e947]:
+                - generic [ref=e950]:
+                  - checkbox "" [ref=e951]
+                  - generic [ref=e953]: 
+              - cell "0290" [ref=e954]:
+                - generic [ref=e955]: "0290"
+              - cell "dhbrukkuzldhbrukkuzl" [ref=e956]:
+                - generic [ref=e957]: dhbrukkuzldhbrukkuzl
+              - cell "ibuvlwtfsfibuvlwtfsf" [ref=e958]:
+                - generic [ref=e959]: ibuvlwtfsfibuvlwtfsf
+              - cell [ref=e960]
+              - cell [ref=e961]
+              - cell [ref=e962]
+              - cell [ref=e963]
+              - cell " " [ref=e964]:
+                - generic [ref=e965]:
+                  - button "" [ref=e966]:
+                    - generic [ref=e967]: 
+                  - button "" [ref=e968]:
+                    - generic [ref=e969]: 
+            - row " 2026006 Dhilsa Nurul Nazma  " [ref=e971] [cursor=pointer]:
+              - cell "" [ref=e972]:
+                - generic [ref=e975]:
+                  - checkbox "" [ref=e976]
+                  - generic [ref=e978]: 
+              - cell "2026006" [ref=e979]:
+                - generic [ref=e980]: "2026006"
+              - cell "Dhilsa Nurul" [ref=e981]:
+                - generic [ref=e982]: Dhilsa Nurul
+              - cell "Nazma" [ref=e983]:
+                - generic [ref=e984]: Nazma
+              - cell [ref=e985]
+              - cell [ref=e986]
+              - cell [ref=e987]
+              - cell [ref=e988]
+              - cell " " [ref=e989]:
+                - generic [ref=e990]:
+                  - button "" [ref=e991]:
+                    - generic [ref=e992]: 
+                  - button "" [ref=e993]:
+                    - generic [ref=e994]: 
+            - row " 0294 DHINA KARAN P  " [ref=e996] [cursor=pointer]:
+              - cell "" [ref=e997]:
+                - generic [ref=e1000]:
+                  - checkbox "" [ref=e1001]
+                  - generic [ref=e1003]: 
+              - cell "0294" [ref=e1004]:
+                - generic [ref=e1005]: "0294"
+              - cell "DHINA KARAN" [ref=e1006]:
+                - generic [ref=e1007]: DHINA KARAN
+              - cell "P" [ref=e1008]:
+                - generic [ref=e1009]: P
+              - cell [ref=e1010]
+              - cell [ref=e1011]
+              - cell [ref=e1012]
+              - cell [ref=e1013]
+              - cell " " [ref=e1014]:
+                - generic [ref=e1015]:
+                  - button "" [ref=e1016]:
+                    - generic [ref=e1017]: 
+                  - button "" [ref=e1018]:
+                    - generic [ref=e1019]: 
+            - row " 0397 Dila Nur Aisah  " [ref=e1021] [cursor=pointer]:
+              - cell "" [ref=e1022]:
+                - generic [ref=e1025]:
+                  - checkbox "" [ref=e1026]
+                  - generic [ref=e1028]: 
+              - cell "0397" [ref=e1029]:
+                - generic [ref=e1030]: "0397"
+              - cell "Dila Nur" [ref=e1031]:
+                - generic [ref=e1032]: Dila Nur
+              - cell "Aisah" [ref=e1033]:
+                - generic [ref=e1034]: Aisah
+              - cell [ref=e1035]
+              - cell [ref=e1036]
+              - cell [ref=e1037]
+              - cell [ref=e1038]
+              - cell " " [ref=e1039]:
+                - generic [ref=e1040]:
+                  - button "" [ref=e1041]:
+                    - generic [ref=e1042]: 
+                  - button "" [ref=e1043]:
+                    - generic [ref=e1044]: 
+            - row " 2026010 Dinara Aiza Rizqia Development  " [ref=e1046] [cursor=pointer]:
+              - cell "" [ref=e1047]:
+                - generic [ref=e1050]:
+                  - checkbox "" [ref=e1051]
+                  - generic [ref=e1053]: 
+              - cell "2026010" [ref=e1054]:
+                - generic [ref=e1055]: "2026010"
+              - cell "Dinara Aiza" [ref=e1056]:
+                - generic [ref=e1057]: Dinara Aiza
+              - cell "Rizqia" [ref=e1058]:
+                - generic [ref=e1059]: Rizqia
+              - cell [ref=e1060]
+              - cell [ref=e1061]
+              - cell "Development" [ref=e1062]:
+                - generic [ref=e1063]: Development
+              - cell [ref=e1064]
+              - cell " " [ref=e1065]:
+                - generic [ref=e1066]:
+                  - button "" [ref=e1067]:
+                    - generic [ref=e1068]: 
+                  - button "" [ref=e1069]:
+                    - generic [ref=e1070]: 
+            - row " 1044-4 Elizabeth Jean Martinez  " [ref=e1072] [cursor=pointer]:
+              - cell "" [ref=e1073]:
+                - generic [ref=e1076]:
+                  - checkbox "" [ref=e1077]
+                  - generic [ref=e1079]: 
+              - cell "1044-4" [ref=e1080]:
+                - generic [ref=e1081]: 1044-4
+              - cell "Elizabeth Jean" [ref=e1082]:
+                - generic [ref=e1083]: Elizabeth Jean
+              - cell "Martinez" [ref=e1084]:
+                - generic [ref=e1085]: Martinez
+              - cell [ref=e1086]
+              - cell [ref=e1087]
+              - cell [ref=e1088]
+              - cell [ref=e1089]
+              - cell " " [ref=e1090]:
+                - generic [ref=e1091]:
+                  - button "" [ref=e1092]:
+                    - generic [ref=e1093]: 
+                  - button "" [ref=e1094]:
+                    - generic [ref=e1095]: 
+            - row " 09557 Emily Jones  " [ref=e1097] [cursor=pointer]:
+              - cell "" [ref=e1098]:
+                - generic [ref=e1101]:
+                  - checkbox "" [ref=e1102]
+                  - generic [ref=e1104]: 
+              - cell "09557" [ref=e1105]:
+                - generic [ref=e1106]: "09557"
+              - cell "Emily" [ref=e1107]:
+                - generic [ref=e1108]: Emily
+              - cell "Jones" [ref=e1109]:
+                - generic [ref=e1110]: Jones
+              - cell [ref=e1111]
+              - cell [ref=e1112]
+              - cell [ref=e1113]
+              - cell [ref=e1114]
+              - cell " " [ref=e1115]:
+                - generic [ref=e1116]:
+                  - button "" [ref=e1117]:
+                    - generic [ref=e1118]: 
+                  - button "" [ref=e1119]:
+                    - generic [ref=e1120]: 
+            - row " 1235 FName Mname LName  " [ref=e1122] [cursor=pointer]:
+              - cell "" [ref=e1123]:
+                - generic [ref=e1126]:
+                  - checkbox "" [ref=e1127]
+                  - generic [ref=e1129]: 
+              - cell "1235" [ref=e1130]:
+                - generic [ref=e1131]: "1235"
+              - cell "FName Mname" [ref=e1132]:
+                - generic [ref=e1133]: FName Mname
+              - cell "LName" [ref=e1134]:
+                - generic [ref=e1135]: LName
+              - cell [ref=e1136]
+              - cell [ref=e1137]
+              - cell [ref=e1138]
+              - cell [ref=e1139]
+              - cell " " [ref=e1140]:
+                - generic [ref=e1141]:
+                  - button "" [ref=e1142]:
+                    - generic [ref=e1143]: 
+                  - button "" [ref=e1144]:
+                    - generic [ref=e1145]: 
+            - row " ATPValue ftdkux ltsxgy  " [ref=e1147] [cursor=pointer]:
+              - cell "" [ref=e1148]:
+                - generic [ref=e1151]:
+                  - checkbox "" [ref=e1152]
+                  - generic [ref=e1154]: 
+              - cell "ATPValue" [ref=e1155]:
+                - generic [ref=e1156]: ATPValue
+              - cell "ftdkux" [ref=e1157]:
+                - generic [ref=e1158]: ftdkux
+              - cell "ltsxgy" [ref=e1159]:
+                - generic [ref=e1160]: ltsxgy
+              - cell [ref=e1161]
+              - cell [ref=e1162]
+              - cell [ref=e1163]
+              - cell [ref=e1164]
+              - cell " " [ref=e1165]:
+                - generic [ref=e1166]:
+                  - button "" [ref=e1167]:
+                    - generic [ref=e1168]: 
+                  - button "" [ref=e1169]:
+                    - generic [ref=e1170]: 
+            - row " ATPValue fthnvn ltwrrt  " [ref=e1172] [cursor=pointer]:
+              - cell "" [ref=e1173]:
+                - generic [ref=e1176]:
+                  - checkbox "" [ref=e1177]
+                  - generic [ref=e1179]: 
+              - cell "ATPValue" [ref=e1180]:
+                - generic [ref=e1181]: ATPValue
+              - cell "fthnvn" [ref=e1182]:
+                - generic [ref=e1183]: fthnvn
+              - cell "ltwrrt" [ref=e1184]:
+                - generic [ref=e1185]: ltwrrt
+              - cell [ref=e1186]
+              - cell [ref=e1187]
+              - cell [ref=e1188]
+              - cell [ref=e1189]
+              - cell " " [ref=e1190]:
+                - generic [ref=e1191]:
+                  - button "" [ref=e1192]:
+                    - generic [ref=e1193]: 
+                  - button "" [ref=e1194]:
+                    - generic [ref=e1195]: 
+            - row " ATPValue fthnvn ltwrrt  " [ref=e1197] [cursor=pointer]:
+              - cell "" [ref=e1198]:
+                - generic [ref=e1201]:
+                  - checkbox "" [ref=e1202]
+                  - generic [ref=e1204]: 
+              - cell "ATPValue" [ref=e1205]:
+                - generic [ref=e1206]: ATPValue
+              - cell "fthnvn" [ref=e1207]:
+                - generic [ref=e1208]: fthnvn
+              - cell "ltwrrt" [ref=e1209]:
+                - generic [ref=e1210]: ltwrrt
+              - cell [ref=e1211]
+              - cell [ref=e1212]
+              - cell [ref=e1213]
+              - cell [ref=e1214]
+              - cell " " [ref=e1215]:
+                - generic [ref=e1216]:
+                  - button "" [ref=e1217]:
+                    - generic [ref=e1218]: 
+                  - button "" [ref=e1219]:
+                    - generic [ref=e1220]: 
+            - row " ATPValue fthyfv ltrhtm  " [ref=e1222] [cursor=pointer]:
+              - cell "" [ref=e1223]:
+                - generic [ref=e1226]:
+                  - checkbox "" [ref=e1227]
+                  - generic [ref=e1229]: 
+              - cell "ATPValue" [ref=e1230]:
+                - generic [ref=e1231]: ATPValue
+              - cell "fthyfv" [ref=e1232]:
+                - generic [ref=e1233]: fthyfv
+              - cell "ltrhtm" [ref=e1234]:
+                - generic [ref=e1235]: ltrhtm
+              - cell [ref=e1236]
+              - cell [ref=e1237]
+              - cell [ref=e1238]
+              - cell [ref=e1239]
+              - cell " " [ref=e1240]:
+                - generic [ref=e1241]:
+                  - button "" [ref=e1242]:
+                    - generic [ref=e1243]: 
+                  - button "" [ref=e1244]:
+                    - generic [ref=e1245]: 
+            - row " ATPValue ftioiu ltpugr  " [ref=e1247] [cursor=pointer]:
+              - cell "" [ref=e1248]:
+                - generic [ref=e1251]:
+                  - checkbox "" [ref=e1252]
+                  - generic [ref=e1254]: 
+              - cell "ATPValue" [ref=e1255]:
+                - generic [ref=e1256]: ATPValue
+              - cell "ftioiu" [ref=e1257]:
+                - generic [ref=e1258]: ftioiu
+              - cell "ltpugr" [ref=e1259]:
+                - generic [ref=e1260]: ltpugr
+              - cell [ref=e1261]
+              - cell [ref=e1262]
+              - cell [ref=e1263]
+              - cell [ref=e1264]
+              - cell " " [ref=e1265]:
+                - generic [ref=e1266]:
+                  - button "" [ref=e1267]:
+                    - generic [ref=e1268]: 
+                  - button "" [ref=e1269]:
+                    - generic [ref=e1270]: 
+            - row " ATPValue ftioiu ltpugr  " [ref=e1272] [cursor=pointer]:
+              - cell "" [ref=e1273]:
+                - generic [ref=e1276]:
+                  - checkbox "" [ref=e1277]
+                  - generic [ref=e1279]: 
+              - cell "ATPValue" [ref=e1280]:
+                - generic [ref=e1281]: ATPValue
+              - cell "ftioiu" [ref=e1282]:
+                - generic [ref=e1283]: ftioiu
+              - cell "ltpugr" [ref=e1284]:
+                - generic [ref=e1285]: ltpugr
+              - cell [ref=e1286]
+              - cell [ref=e1287]
+              - cell [ref=e1288]
+              - cell [ref=e1289]
+              - cell " " [ref=e1290]:
+                - generic [ref=e1291]:
+                  - button "" [ref=e1292]:
+                    - generic [ref=e1293]: 
+                  - button "" [ref=e1294]:
+                    - generic [ref=e1295]: 
+            - row " ATPValue ftioiu ltpugr  " [ref=e1297] [cursor=pointer]:
+              - cell "" [ref=e1298]:
+                - generic [ref=e1301]:
+                  - checkbox "" [ref=e1302]
+                  - generic [ref=e1304]: 
+              - cell "ATPValue" [ref=e1305]:
+                - generic [ref=e1306]: ATPValue
+              - cell "ftioiu" [ref=e1307]:
+                - generic [ref=e1308]: ftioiu
+              - cell "ltpugr" [ref=e1309]:
+                - generic [ref=e1310]: ltpugr
+              - cell [ref=e1311]
+              - cell [ref=e1312]
+              - cell [ref=e1313]
+              - cell [ref=e1314]
+              - cell " " [ref=e1315]:
+                - generic [ref=e1316]:
+                  - button "" [ref=e1317]:
+                    - generic [ref=e1318]: 
+                  - button "" [ref=e1319]:
+                    - generic [ref=e1320]: 
+            - row " ATPValue ftioiu ltpugr  " [ref=e1322] [cursor=pointer]:
+              - cell "" [ref=e1323]:
+                - generic [ref=e1326]:
+                  - checkbox "" [ref=e1327]
+                  - generic [ref=e1329]: 
+              - cell "ATPValue" [ref=e1330]:
+                - generic [ref=e1331]: ATPValue
+              - cell "ftioiu" [ref=e1332]:
+                - generic [ref=e1333]: ftioiu
+              - cell "ltpugr" [ref=e1334]:
+                - generic [ref=e1335]: ltpugr
+              - cell [ref=e1336]
+              - cell [ref=e1337]
+              - cell [ref=e1338]
+              - cell [ref=e1339]
+              - cell " " [ref=e1340]:
+                - generic [ref=e1341]:
+                  - button "" [ref=e1342]:
+                    - generic [ref=e1343]: 
+                  - button "" [ref=e1344]:
+                    - generic [ref=e1345]: 
+            - row " ATPValue ftndlm ltdyyf  " [ref=e1347] [cursor=pointer]:
+              - cell "" [ref=e1348]:
+                - generic [ref=e1351]:
+                  - checkbox "" [ref=e1352]
+                  - generic [ref=e1354]: 
+              - cell "ATPValue" [ref=e1355]:
+                - generic [ref=e1356]: ATPValue
+              - cell "ftndlm" [ref=e1357]:
+                - generic [ref=e1358]: ftndlm
+              - cell "ltdyyf" [ref=e1359]:
+                - generic [ref=e1360]: ltdyyf
+              - cell [ref=e1361]
+              - cell [ref=e1362]
+              - cell [ref=e1363]
+              - cell [ref=e1364]
+              - cell " " [ref=e1365]:
+                - generic [ref=e1366]:
+                  - button "" [ref=e1367]:
+                    - generic [ref=e1368]: 
+                  - button "" [ref=e1369]:
+                    - generic [ref=e1370]: 
+            - row " ATPValue ftpjte ltpzkj  " [ref=e1372] [cursor=pointer]:
+              - cell "" [ref=e1373]:
+                - generic [ref=e1376]:
+                  - checkbox "" [ref=e1377]
+                  - generic [ref=e1379]: 
+              - cell "ATPValue" [ref=e1380]:
+                - generic [ref=e1381]: ATPValue
+              - cell "ftpjte" [ref=e1382]:
+                - generic [ref=e1383]: ftpjte
+              - cell "ltpzkj" [ref=e1384]:
+                - generic [ref=e1385]: ltpzkj
+              - cell [ref=e1386]
+              - cell [ref=e1387]
+              - cell [ref=e1388]
+              - cell [ref=e1389]
+              - cell " " [ref=e1390]:
+                - generic [ref=e1391]:
+                  - button "" [ref=e1392]:
+                    - generic [ref=e1393]: 
+                  - button "" [ref=e1394]:
+                    - generic [ref=e1395]: 
+            - row " ATPValue ftyseo ltzbbp  " [ref=e1397] [cursor=pointer]:
+              - cell "" [ref=e1398]:
+                - generic [ref=e1401]:
+                  - checkbox "" [ref=e1402]
+                  - generic [ref=e1404]: 
+              - cell "ATPValue" [ref=e1405]:
+                - generic [ref=e1406]: ATPValue
+              - cell "ftyseo" [ref=e1407]:
+                - generic [ref=e1408]: ftyseo
+              - cell "ltzbbp" [ref=e1409]:
+                - generic [ref=e1410]: ltzbbp
+              - cell [ref=e1411]
+              - cell [ref=e1412]
+              - cell [ref=e1413]
+              - cell [ref=e1414]
+              - cell " " [ref=e1415]:
+                - generic [ref=e1416]:
+                  - button "" [ref=e1417]:
+                    - generic [ref=e1418]: 
+                  - button "" [ref=e1419]:
+                    - generic [ref=e1420]: 
+            - row " ATPValue ftyseo ltzbbp  " [ref=e1422] [cursor=pointer]:
+              - cell "" [ref=e1423]:
+                - generic [ref=e1426]:
+                  - checkbox "" [ref=e1427]
+                  - generic [ref=e1429]: 
+              - cell "ATPValue" [ref=e1430]:
+                - generic [ref=e1431]: ATPValue
+              - cell "ftyseo" [ref=e1432]:
+                - generic [ref=e1433]: ftyseo
+              - cell "ltzbbp" [ref=e1434]:
+                - generic [ref=e1435]: ltzbbp
+              - cell [ref=e1436]
+              - cell [ref=e1437]
+              - cell [ref=e1438]
+              - cell [ref=e1439]
+              - cell " " [ref=e1440]:
+                - generic [ref=e1441]:
+                  - button "" [ref=e1442]:
+                    - generic [ref=e1443]: 
+                  - button "" [ref=e1444]:
+                    - generic [ref=e1445]: 
+            - row " ATPValue ftyseo ltzbbp  " [ref=e1447] [cursor=pointer]:
+              - cell "" [ref=e1448]:
+                - generic [ref=e1451]:
+                  - checkbox "" [ref=e1452]
+                  - generic [ref=e1454]: 
+              - cell "ATPValue" [ref=e1455]:
+                - generic [ref=e1456]: ATPValue
+              - cell "ftyseo" [ref=e1457]:
+                - generic [ref=e1458]: ftyseo
+              - cell "ltzbbp" [ref=e1459]:
+                - generic [ref=e1460]: ltzbbp
+              - cell [ref=e1461]
+              - cell [ref=e1462]
+              - cell [ref=e1463]
+              - cell [ref=e1464]
+              - cell " " [ref=e1465]:
+                - generic [ref=e1466]:
+                  - button "" [ref=e1467]:
+                    - generic [ref=e1468]: 
+                  - button "" [ref=e1469]:
+                    - generic [ref=e1470]: 
+            - row " ATPValue ftyseo ltzbbp  " [ref=e1472] [cursor=pointer]:
+              - cell "" [ref=e1473]:
+                - generic [ref=e1476]:
+                  - checkbox "" [ref=e1477]
+                  - generic [ref=e1479]: 
+              - cell "ATPValue" [ref=e1480]:
+                - generic [ref=e1481]: ATPValue
+              - cell "ftyseo" [ref=e1482]:
+                - generic [ref=e1483]: ftyseo
+              - cell "ltzbbp" [ref=e1484]:
+                - generic [ref=e1485]: ltzbbp
+              - cell [ref=e1486]
+              - cell [ref=e1487]
+              - cell [ref=e1488]
+              - cell [ref=e1489]
+              - cell " " [ref=e1490]:
+                - generic [ref=e1491]:
+                  - button "" [ref=e1492]:
+                    - generic [ref=e1493]: 
+                  - button "" [ref=e1494]:
+                    - generic [ref=e1495]: 
+            - row " ATPValue ftyseo ltzbbp  " [ref=e1497] [cursor=pointer]:
+              - cell "" [ref=e1498]:
+                - generic [ref=e1501]:
+                  - checkbox "" [ref=e1502]
+                  - generic [ref=e1504]: 
+              - cell "ATPValue" [ref=e1505]:
+                - generic [ref=e1506]: ATPValue
+              - cell "ftyseo" [ref=e1507]:
+                - generic [ref=e1508]: ftyseo
+              - cell "ltzbbp" [ref=e1509]:
+                - generic [ref=e1510]: ltzbbp
+              - cell [ref=e1511]
+              - cell [ref=e1512]
+              - cell [ref=e1513]
+              - cell [ref=e1514]
+              - cell " " [ref=e1515]:
+                - generic [ref=e1516]:
+                  - button "" [ref=e1517]:
+                    - generic [ref=e1518]: 
+                  - button "" [ref=e1519]:
+                    - generic [ref=e1520]: 
+        - navigation "Pagination Navigation" [ref=e1522]:
+          - list [ref=e1523]:
+            - listitem [ref=e1524]:
+              - button "1" [ref=e1525] [cursor=pointer]
+            - listitem [ref=e1526]:
+              - button "2" [ref=e1527] [cursor=pointer]
+            - listitem [ref=e1528]:
+              - button "3" [ref=e1529] [cursor=pointer]
+            - listitem [ref=e1530]:
+              - button "4" [ref=e1531] [cursor=pointer]
+            - listitem [ref=e1532]:
+              - button "5" [ref=e1533] [cursor=pointer]
+            - listitem [ref=e1534]:
+              - button "" [ref=e1535] [cursor=pointer]:
+                - generic [ref=e1536]: 
+    - generic [ref=e1537]:
+      - paragraph [ref=e1538]: OrangeHRM OS 5.8
+      - paragraph [ref=e1539]:
+        - text: © 2005 - 2026
+        - link "OrangeHRM, Inc" [ref=e1540] [cursor=pointer]:
+          - /url: http://www.orangehrm.com
+        - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+  265 | 
+  266 |             duplicates.push(text);
+  267 |         }
+  268 |         else {
+  269 |             myset.add(text);
+  270 |         }
+  271 |     }
+  272 |     //console.log("Duplicate options are:===>", duplicates);
+  273 | 
+  274 |     if (duplicates.length > 0) {
+  275 |         console.log("Duplicate options found.", duplicates)
+  276 |     }
+  277 |     else {
+  278 |         console.log("No duplicate options found..")
+  279 |     }
+  280 |     //expect(duplicates.length).toBe(0);
+  281 | });
+  282 | 
+  283 | //await page.waitForTimeout(5000);
+  284 | 
+  285 | //========================================================= Session-8 =========================================================
+  286 | 
+  287 | test('AutoSuggest dropdown', async ({ page }) => {
+  288 | 
+  289 |     await page.goto('https://www.flipkart.com/');
+  290 |     await page.locator('//span[@role="button"]').click();
+  291 |     const searchBar: Locator = page.locator('//form[@class="lilxh_ header-form-search"]//input[@placeholder="Search for Products, Brands and More"]');
+  292 |     await searchBar.fill('smart');
+  293 |     await page.waitForLoadState('domcontentloaded');
+  294 |     await page.locator('//button[@type="submit"]').click();
+  295 |     const searchbar2: Locator = page.locator('//form[@class="rcHWnF header-form-search"]//input[@placeholder="Search for products, brands and more"]');
+  296 |     await searchbar2.click();
+  297 |     await searchbar2.clear();
+  298 |     await searchbar2.type('smart', { delay: 500 });
+  299 | 
+  300 |     // Get all suggest options
+  301 |     const options: Locator = page.locator('//ul[@class="col-12-12 I01Bvi O1jfZ8"]/li');
+  302 |     await page.waitForLoadState('domcontentloaded');
+  303 |     const optionsCount: number = await options.count();
+  304 |     console.log('Number of suggest options:', optionsCount);
+  305 | 
+  306 |     //printing all the suggest options
+  307 | 
+  308 |     console.log('5th option : ', await options.nth(5).innerText());
+  309 | 
+  310 |     // Print all the suggest options
+  311 |     for (let i = 0; i < optionsCount; i++) {
+  312 |         const optionText: string | null = await options.nth(i).textContent();
+  313 |         console.log(`Option ${i + 1}: ${optionText?.trim()}`);
+  314 |     }
+  315 | 
+  316 |     //Select/Click on the smartPhone option
+  317 |     for (let i = 0; i < optionsCount; i++) {
+  318 |         const optionText: string | null = await options.nth(i).textContent();
+  319 |         if (optionText === 'smartphone') {
+  320 |             options.nth(i).click();
+  321 |             break;
+  322 |         }
+  323 |     }
+  324 |     await page.waitForTimeout(5000);
+  325 | });
+  326 | 
+  327 | test.only("Bootsrtap hidden dropdown", async ({ page }) => {
+  328 | 
+  329 |     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  330 | 
+  331 |     //Login steps
+  332 | 
+  333 |     await page.locator('input[name="username"]').fill('Admin');
+  334 |     await page.locator('input[name="password"]').fill('admin123');
+  335 |     await page.locator('//button[normalize-space()="Login"]').click();
+  336 | 
+  337 |     //click on the PIM
+  338 | 
+  339 |     await page.getByText('PIM').click();
+  340 | 
+  341 |     //click on Job TiTLE Dropdown
+  342 | 
+  343 |     const dropdownArrow :Locator = page.locator('//label[normalize-space()="Job Title"]/ancestor::div[contains(@class,"oxd-input-group")]//i');
+  344 |     await dropdownArrow.click(); 
+  345 |     await page.waitForTimeout(5000);
+  346 | 
+  347 |     // capture all the options from dropdown and count
+  348 | 
+  349 |     const options: Locator = page.locator('div[role="listbox"] span');
+  350 |     const count: number = await options.count();
+  351 |     console.log("Number of options in a dropdown:", count);
+  352 | 
+  353 |     // Print all the options
+  354 | 
+  355 |     console.log("All the text contenst:", await options.allTextContents());
+  356 | 
+  357 |     console.log("Pring all the options.....")
+  358 |     for (let i = 0; i < count; i++) {
+  359 |         console.log(await options.nth(i).innerText());
+  360 |         console.log(await options.nth(i).textContent());
+  361 |     }
+  362 | 
+  363 |     // select/click on option
+  364 |     for (let i = 0; i < count; i++) {
+> 365 |         const text = await options.nth(i).innerText();
+      |                                           ^ Error: locator.innerText: Test timeout of 30000ms exceeded.
+  366 |         if (text === 'Automation Tester') {
+  367 |             await options.nth(i).click();
+  368 |         }
+  369 |     }
+  370 |      await page.waitForTimeout(5000);
+  371 | 
+  372 | });
+  373 | 
+  374 | 
+  375 | 
+```

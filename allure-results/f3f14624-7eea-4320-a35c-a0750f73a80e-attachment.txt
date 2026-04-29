@@ -1,0 +1,72 @@
+Number of options in a dropdown: 34
+All the text contenst: [
+  'Automation Tester',
+  'Automation Tester 1777373288935',
+  'Automation Tester 2.0',
+  'Automation Tester 2.0 - fe87da',
+  'AutoTesting30',
+  'AutoTesting61',
+  'AutoTesting96',
+  'AutoTesting98',
+  'Content Specialist',
+  'Customer Success Manager',
+  'Database Administrator',
+  'Finance Manager',
+  'Financial Analyst',
+  'Head of Support',
+  'HR Associate',
+  'HR Manager',
+  'IT Manager',
+  'Network Administrator',
+  'Payroll Administrator',
+  'Pre-Sales Coordinator',
+  'QA Automation Engineer',
+  'QA Engineer',
+  'QA Lead',
+  'qwer',
+  'rsjsrii',
+  'Sales Representative',
+  'Social Media Marketer',
+  'Software Architect',
+  'Software Engineer',
+  'Software Tester',
+  'Software Testing',
+  'Support Specialist',
+  'VP - Client Services',
+  'VP - Sales & Marketing'
+]
+Pring all the options.....
+Automation Tester
+Automation Tester 1777373288935
+Automation Tester 2.0
+Automation Tester 2.0 - fe87da
+AutoTesting30
+AutoTesting61
+AutoTesting96
+AutoTesting98
+Content Specialist
+Customer Success Manager
+Database Administrator
+Finance Manager
+Financial Analyst
+Head of Support
+HR Associate
+HR Manager
+IT Manager
+Network Administrator
+Payroll Administrator
+Pre-Sales Coordinator
+QA Automation Engineer
+QA Engineer
+QA Lead
+qwer
+rsjsrii
+Sales Representative
+Social Media Marketer
+Software Architect
+Software Engineer
+Software Tester
+Software Testing
+Support Specialist
+VP - Client Services
+VP - Sales & Marketing
